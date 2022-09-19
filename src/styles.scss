@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: antiquewhite;
+}
+
+
+
+
+
+
+.main{
+
+    display: block;
+    margin: 1em;
+    //text-align: center;
+    //cursor: pointer;
+    
+.title{
+    font-family: 'Aboreto', cursive;
+    text-align: center;
+    font-size: 3em;
+    cursor: pointer;
+   
+}
+
+.navbar{
+  
+   margin: 1em;
+   text-align: center;
+   
+    li, a{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        font-size: 25px;
+        color:black;
+        text-decoration: none;
+        
+    }
+
+}
+}
+.nav_links{
+    list-style: none;
+    li{
+        display: inline-block;
+        padding: 0 20px;
+        a{
+            transition: all 0.3s ease 0s;
+        }
+    }
+
+}
+.nav_links li a:hover{
+    color: aqua;
+}
+
+hr{
+    width: 50%;
+    border: none;
+    height: 0.1px;
+    margin: auto;
+
+    background-color: black;
+}
