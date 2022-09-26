@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Image } from './image';
+import { ImageService } from './image.service';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+ 
+
+  constructor(private imageService: ImageService) { }
+
+  imageProfil: Image | undefined; 
 
   ngOnInit(): void {
+    this.getImageProfil();
   }
+
+  public getImageProfil(): void{
+       this.imageService.getImageUrl().subscribe(
+        (response) => this.imageProfil = response,
+        (error: any) => console.log(error),
+        () => console.log("Done!")
+       );
+  }
+
+
 
 }
