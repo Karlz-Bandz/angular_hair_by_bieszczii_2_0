@@ -6,33 +6,38 @@
    // border-width: 1px;
     padding: 2em;
     
-    font-family: 'Aboreto', cursive;
+    font-family: 'Montserrat', sans-serif;
 
     
     .small-container{
         height: 140px;
         margin-right: 20%;
         margin-left: 20%;
+        font-size: 25px;
+        
+        .serwis-title{
+      
+            display: inline-block;
+            margin: 1em;
+            font-weight: 900;
+            
+            
+            
+    
+        }
+        .price-title{
+            
+            float: right;
+            margin: 1em;
+            font-weight: 900;
+            
+            
+    
+        }
+            
     }
     
-    .serwis-title{
-      
-        display: inline-block;
-        margin: 1em;
-        font-weight: 900;
-        
-        
-
-    }
-    .price-title{
-        
-        float: right;
-        margin: 1em;
-        font-weight: 900;
-        
-
-    }
-        
+   
     
     
     .record{
@@ -42,18 +47,23 @@
         border-bottom: 1px dotted;
         margin-right: 10%;
         margin-left: 10%;
+        font-size: 20px;
+        font-weight: 500;
+
+
+        .serwis{
+            display: inline-block;
+            margin: 1em;
+            
+            
+            
+        }
+        .price{
+            float: right;
+            margin: 1em;
+            
+        }
     }
-    .serwis{
-        display: inline-block;
-        margin: 1em;
-        
-        
-        
-    }
-    .price{
-        float: right;
-        margin: 1em;
-        
-    }
+    
     
 }
