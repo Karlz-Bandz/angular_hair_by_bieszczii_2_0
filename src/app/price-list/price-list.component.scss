@@ -1,0 +1,59 @@
+
+
+.container{
+    margin-top: 3em;
+   // border: solid;
+   // border-width: 1px;
+    padding: 2em;
+    
+    font-family: 'Aboreto', cursive;
+
+    
+    .small-container{
+        height: 140px;
+        margin-right: 20%;
+        margin-left: 20%;
+    }
+    
+    .serwis-title{
+      
+        display: inline-block;
+        margin: 1em;
+        font-weight: 900;
+        
+        
+
+    }
+    .price-title{
+        
+        float: right;
+        margin: 1em;
+        font-weight: 900;
+        
+
+    }
+        
+    
+    
+    .record{
+       // border: 1px solid;
+        margin: 2px;
+        height: 150px;
+        border-bottom: 1px dotted;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+    .serwis{
+        display: inline-block;
+        margin: 1em;
+        
+        
+        
+    }
+    .price{
+        float: right;
+        margin: 1em;
+        
+    }
+    
+}

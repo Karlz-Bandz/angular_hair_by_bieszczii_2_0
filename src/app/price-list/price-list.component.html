@@ -1,1 +1,31 @@
-<p>price-list works!</p>
+
+
+
+
+
+<div class="container">
+
+    <div class="small-container">
+    <div class="serwis-title">
+        Usługi
+    </div>
+    <div class="price-title">
+        Cena
+    </div>
+    </div>
+
+
+    <div class="records" *ngFor="let lists of prices">
+
+    <div class="record">
+        <div class="serwis">
+            {{lists.name}}
+        </div>
+        <br><br>
+        <div class="price">
+            {{lists.price}}
+        </div>
+    </div>
+        
+    </div>
+</div>
