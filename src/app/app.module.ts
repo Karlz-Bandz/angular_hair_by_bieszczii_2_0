@@ -9,6 +9,9 @@ import { MainComponent } from './main/main.component';
 import { PhotosComponent } from './photos/photos.component';
 import { PriceListComponent } from './price-list/price-list.component';
 import { ContactComponent } from './contact/contact.component';
+import { MailComponent } from './mail/mail.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -17,17 +20,20 @@ import { ContactComponent } from './contact/contact.component';
     MainComponent,
     PhotosComponent,
     PriceListComponent,
-    ContactComponent
+    ContactComponent,
+    MailComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     RouterModule.forRoot([
       {path: '', component: MainComponent},
       {path: 'about', component: AboutComponent},
       {path: 'gallery', component: PhotosComponent},
       {path: 'pricelist', component: PriceListComponent},
-      {path: 'contact', component: ContactComponent}
+      {path: 'contact', component: ContactComponent},
+      {path: 'mail', component: MailComponent}
     ])
   ],
   providers: [],

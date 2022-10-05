@@ -1,0 +1,41 @@
+<div class="container">
+
+<div class="small-container">
+  
+    <br><br><br><br>
+
+      <h2>Napisz do mnie</h2> <br>
+
+
+  <form #mailForm="ngForm" (ngSubmit)="mailSend(mailForm.value)" ngNativeValidate>
+    
+        <div class="in">
+        <label for="senderMail">Email: </label>
+        <input class="info" type="email" name="senderMail" placeholder="Wpisz swój e-mail" ngModel required>
+        </div>
+    
+        <div class="in">
+        <label for="subjectMail">Temat: </label>
+        <input class="info" type="text" name="subjectMail" placeholder="Podaj temat"  ngModel >
+        </div>
+    
+        <div class="in">
+          <br>
+        <label for="bodyMail">Wiadomość: </label><br><br>
+        <textarea class="info" type="text" name="bodyMail" placeholder="W czym mogę Ci pomóc?" ngModel required></textarea>
+        </div>
+
+        <input type="submit" value="Wyślij">
+    
+    
+    
+  </form>
+</div>
+
+
+
+
+
+
+</div>
+
