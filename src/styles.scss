@@ -10,6 +10,7 @@
     box-sizing: border-box;
     //background-color: #FFE4E4;
    background-color: #F4D4C8;
+   scroll-margin-bottom: 400px;
 }
 
 
@@ -20,15 +21,28 @@
 .main{
 
     display: block;
-    margin: 1em;
+    margin: 0em;
     //text-align: center;
     //cursor: pointer;
+    padding-top: 50px ;
+    
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    width: 100%;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 200px;
+    opacity: 0.8;
+    
     
 .title{
     font-family: 'Aboreto', cursive;
     text-align: center;
     font-size: 3em;
     cursor: pointer;
+    
     a{
         text-decoration: none;
         color: black;
