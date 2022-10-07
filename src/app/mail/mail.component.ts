@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -9,7 +10,8 @@ import { environment } from 'src/environments/environment';
 })
 export class MailComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+              private rout: Router) { }
 
   private apiServer = environment.apiBaseUrl;
 
@@ -17,11 +19,20 @@ export class MailComponent implements OnInit {
   }
 
 
-  public mailSend(mailData: {senderMail: string, subjectMail: string, bodyMail: string}): void{
-    console.log(mailData);
+  public mailSend(mailData: {senderMail: string, subjectMail: string, bodyMail: string}){
+     console.log(mailData);
       this.http.post(`${this.apiServer}/mail/test`, mailData).subscribe(
-        (response) => console.log(response)
+        
+        data => this.rout.navigate(['/success']),
+        err => this.rout.navigate(['/error'])
+
+        
+        
       );
+
+      
+
+      
 
   }
 
