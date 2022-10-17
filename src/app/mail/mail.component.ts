@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2, ResolvedReflectiveFactory } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 
@@ -14,26 +14,35 @@ export class MailComponent implements OnInit {
               private rout: Router) { }
 
   private apiServer = environment.apiBaseUrl;
+  
+
+  
 
   ngOnInit(): void {
+  
   }
 
+  public responseBool: boolean = true;
 
-  public mailSend(mailData: {senderMail: string, subjectMail: string, bodyMail: string}){
+
+  public mailSend(mailData: {senderMail: string, subjectMail: string, bodyMail: string, recaptchaResponse: string}): void{
      console.log(mailData);
+     if(mailData.recaptchaResponse === ''){
+     // this.rout.navigate(['/error'])
+     this.responseBool = false;
+     console.log("Error");
+     }else{
       this.http.post(`${this.apiServer}/mail/test`, mailData).subscribe(
         
         data => this.rout.navigate(['/success']),
         err => this.rout.navigate(['/error'])
 
-        
+      
         
       );
+    }
 
-      
-
-      
-
-  }
+ }
+ 
 
 }

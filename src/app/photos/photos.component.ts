@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Photo } from './photos';
 import { PhotosService } from './photos.service';
 
@@ -9,7 +10,8 @@ import { PhotosService } from './photos.service';
 })
 export class PhotosComponent implements OnInit {
 
-  constructor(private photoService: PhotosService) { }
+  constructor(private photoService: PhotosService,
+              private rout: Router) { }
 
   public photos: Photo[] = [];
 
@@ -20,7 +22,8 @@ export class PhotosComponent implements OnInit {
   public getPhotos(): void{
     this.photoService.getImagesNoProfil().subscribe(
       (response: Photo[]) => this.photos = response,
-      (error: any) => console.log(error),
+      (error: any) => {console.log(error);
+                        this.rout.navigate(['/error/main'])},
       () => console.log("Done!")
     );
   }

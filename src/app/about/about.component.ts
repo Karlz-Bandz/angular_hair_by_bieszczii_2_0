@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Image } from './image';
 import { ImageService } from './image.service';
 
@@ -11,7 +12,8 @@ export class AboutComponent implements OnInit {
 
  
 
-  constructor(private imageService: ImageService) { }
+  constructor(private imageService: ImageService,
+              private rout: Router) { }
 
   imageProfil: Image | undefined; 
 
@@ -22,7 +24,8 @@ export class AboutComponent implements OnInit {
   public getImageProfil(): void{
        this.imageService.getImageUrl().subscribe(
         (response) => this.imageProfil = response,
-        (error: any) => console.log(error),
+        (error: any) => {console.log(error);
+                         this.rout.navigate(['/error/main']) },
         () => console.log("Done!")
        );
   }

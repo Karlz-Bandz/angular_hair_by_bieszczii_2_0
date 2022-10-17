@@ -1,6 +1,8 @@
 
 <div class="container">
 
+  
+
 <div class="small-container">
   
     <br><br><br><br>
@@ -26,7 +28,21 @@
         <textarea class="info" type="text" name="bodyMail" placeholder="W czym mogę Ci pomóc?" ngModel required></textarea>
         </div>
 
+        <div class="recap_container">
+          <re-captcha class="recap" name="recaptchaResponse" siteKey="6Lf8smkiAAAAAJC70ikUtGBS2zqqgMCzcleLlhIe" ngModel></re-captcha>
+          
+        </div>
+        <div *ngIf="!responseBool" class="ErrorCaptcha">
+          <a class="ErrorCaptchaMessage">Proszę o zaznaczenie pola "Nie jestem Robotem"</a>
+        </div>
+
         <input class="btn" type="submit" value="Wyślij">
+
+        
+        
+        
+        
+        
     
     
     

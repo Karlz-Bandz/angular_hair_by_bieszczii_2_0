@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Price } from './price';
 import { PriceService } from './price.service';
 
@@ -9,7 +10,8 @@ import { PriceService } from './price.service';
 })
 export class PriceListComponent implements OnInit {
 
-  constructor(private priceServis: PriceService) { }
+  constructor(private priceServis: PriceService,
+              private rout: Router) { }
 
   public prices: Price[] = [];
 
@@ -20,7 +22,8 @@ export class PriceListComponent implements OnInit {
   public getPricesLists(): void{
     this.priceServis.getPrices().subscribe(
         (response: Price[]) => this.prices = response,
-        (error: any) => console.log(error),
+        (error: any) => {console.log(error);
+                          this.rout.navigate(['error/main'])},
         () => console.log("Done!")
     );
   }

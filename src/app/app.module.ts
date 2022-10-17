@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
+
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { MainComponent } from './main/main.component';
@@ -13,6 +14,11 @@ import { MailComponent } from './mail/mail.component';
 import { FormsModule } from '@angular/forms';
 import { SuccessMessageComponent } from './success-message/success-message.component';
 import { ErrorMessageComponent } from './error-message/error-message.component';
+import { ErrorComponent } from './error/error.component';
+import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
+
+
+
 
 
 @NgModule({
@@ -25,12 +31,15 @@ import { ErrorMessageComponent } from './error-message/error-message.component';
     ContactComponent,
     MailComponent,
     SuccessMessageComponent,
-    ErrorMessageComponent
+    ErrorMessageComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    RecaptchaModule,
+    RecaptchaFormsModule,
     RouterModule.forRoot([
       {path: '', component: MainComponent},
       {path: 'about', component: AboutComponent},
@@ -39,10 +48,13 @@ import { ErrorMessageComponent } from './error-message/error-message.component';
       {path: 'contact', component: ContactComponent},
       {path: 'mail', component: MailComponent},
       {path: 'success', component: SuccessMessageComponent},
-      {path: 'error', component: ErrorMessageComponent}
+      {path: 'error', component: ErrorMessageComponent},
+      {path: 'error/main', component: ErrorComponent}
     ])
   ],
-  providers: [],
+  providers: [
+ 
+  ],
   bootstrap: [
     AppComponent
   ]

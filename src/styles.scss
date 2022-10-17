@@ -95,3 +95,39 @@ hr{
 
     background-color: black;
 }
+
+.footer-main{
+    position:fixed;
+    width:100%;
+    bottom: 0;
+    display: inline-block;
+    
+    
+    
+    
+       .image-footer{
+           width: 35px;
+           height: auto;
+           border-radius: 15%;
+           margin: 5px;
+           
+       }
+       
+    
+    
+        .copy{
+          float: right;  
+          padding-top: 24px;
+          padding-right: 5px;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 600;
+          font-size: small;
+          text-decoration: none;
+          color: black;
+          
+        }
+    
+}
+
+
+
