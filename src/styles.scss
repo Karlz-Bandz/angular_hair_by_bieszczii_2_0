@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+
+
+
+
 
 
 *{
@@ -15,7 +19,7 @@
 
 
 
-
+@media only screen and (min-width: 420px){
 
 
 .main{
@@ -127,6 +131,88 @@ hr{
           
         }
     
+}
+}
+
+@media only screen and (max-width: 420px) {
+    .main{
+        hr{
+            display: none;
+        }
+        .navbar{
+            display: none;
+        }
+        display: block;
+        margin: 0em;
+        //text-align: center;
+        //cursor: pointer;
+        padding-top: 10px ;
+        
+        position: fixed;
+        top: 0px;
+        z-index: 2;
+        width: 100%;
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        height: 90px;
+        opacity: 0.8;
+
+      
+
+        .title{
+            font-family: 'Aboreto', cursive;
+            
+            font-size: 4em;
+            cursor: pointer;
+
+            .mobile-menu{
+                margin-left: 35px;
+            }
+            
+            
+            a{
+                text-decoration: none;
+                color: black;
+                margin-left: 0.5em ;
+            }
+            
+           
+        
+        }
+    }
+    .footer-main{
+        position:fixed;
+        width:100%;
+        bottom: 0;
+        display: inline-block;
+        
+        
+        
+        
+           .image-footer{
+               width: 35px;
+               height: auto;
+               border-radius: 15%;
+               margin: 5px;
+               
+           }
+           
+        
+        
+            .copy{
+              float: right;  
+              padding-top: 24px;
+              padding-right: 5px;
+              font-family: 'Montserrat', sans-serif;
+              font-weight: 600;
+              font-size: small;
+              text-decoration: none;
+              color: black;
+              
+            }
+        
+    }
 }
 
 
