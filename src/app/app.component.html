@@ -1,19 +1,20 @@
 
 <br><br><br><br><br><br><br><br><br>
 <div class="main">
-    <div class="title"><a routerLink="/">Hair by Bieszczii</a><img src="assets\svg\scissors.svg" class="mobile-menu" id="mobile-manu-class" alt="mobile-menu-bar" width="55px" height="auto"></div>
+    <div class="title"><a routerLink="/">Hair by Bieszczii</a><img src="assets\svg\scissors.svg" class="mobile-menu" id="mobile-menu-class" alt="mobile-menu-bar"></div>
    
          <br>
          <hr>
-         <div class="navbar">
-             <nav>
+         <div class="navbar" id="navbar-script">
+            <div class="exit-icon"><img class="exit-icon2" id="exit-icon-script" alt="exit-img" src="assets\svg\x.svg" ></div>
+             
                    <ul class="nav_links">
                          <li><a routerLink="/about">O mnie</a></li>
                          <li><a routerLink="/gallery">Galeria</a></li>
                          <li><a routerLink="/pricelist">Cennik</a></li>
                          <li><a routerLink="/contact">Kontakt</a></li>
                    </ul>
-             </nav>
+             
           </div>
    
 </div>
@@ -28,6 +29,18 @@
          <a href="https://www.instagram.com/karls.bands/" class="copy" target="_blank">Copyright &copy; 2022 Karol Melak</a>
       
 </div>
+<script>
+
+
+const mobileBtn = document.getElementById('mobile-menu-class');
+nav = document.querySelector('nav');
+mobileBtnExit = document.getElementById('exit-icon-script');
+
+mobileBtn.addEventListener('click', () => {
+      nav.classList.add('navbar-script');
+})
+
+</script>
 
    <router-outlet></router-outlet>
 

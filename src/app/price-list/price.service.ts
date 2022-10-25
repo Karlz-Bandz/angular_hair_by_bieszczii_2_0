@@ -14,6 +14,6 @@ export class PriceService {
   private apiServerUrl = environment.apiBaseUrl;
 
   public getPrices(): Observable<Price[]>{
-    return this.http.get<Price[]>(`${this.apiServerUrl}/work/all`);
+    return this.http.get<Price[]>(`${this.apiServerUrl}/price/list`);
   }
 }

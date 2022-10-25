@@ -7,18 +7,21 @@
     padding: 2em;
     
     font-family: 'Montserrat', sans-serif;
+    margin-bottom: 130px;
 
     
     .small-container{
+        
         height: 140px;
         margin-right: 20%;
         margin-left: 20%;
         font-size: 25px;
         
+        
         .serwis-title{
       
             display: inline-block;
-            margin: 1em;
+            margin: 0.5em;
             font-weight: 900;
             
             
@@ -28,7 +31,7 @@
         .price-title{
             
             float: right;
-            margin: 1em;
+            margin: 0.5em;
             font-weight: 900;
             
             
@@ -39,21 +42,27 @@
     
    
     
-    
-    .record{
-       // border: 1px solid;
-        margin: 2px;
-        height: 150px;
+    .records{
+
         border-bottom: 1px dotted;
-        margin-right: 10%;
-        margin-left: 10%;
-        font-size: 20px;
+        margin-right: 20%;
+        margin-left: 20%;
+    .record{
+      
+      // padding: 5px;
+      // padding-bottom: 25px;
+        
+        font-size: 17px;
         font-weight: 500;
 
 
         .serwis{
             display: inline-block;
             margin: 1em;
+            font-weight: 900;
+            font-size: 20px;
+         
+
             
             
             
@@ -61,9 +70,22 @@
         .price{
             float: right;
             margin: 1em;
+            font-weight: 700;
+           padding: 14px;
+            border-radius: 99%;
+         
+            filter: brightness(96%);
+            
             
         }
+        .description{
+           font-weight: 500;
+        }
+
+
+        margin-bottom: 1.5em;
     }
     
     
+}
 }

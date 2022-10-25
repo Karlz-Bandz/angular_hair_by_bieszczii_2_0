@@ -1,8 +1,17 @@
+
+
+@media only screen and (min-width: 420px){
+
 .container{
     margin: 3em;
     text-align: center;
     padding: 2em;
     display: block;
+    .main-img{
+        width: 450px;
+        height: auto;
+        border: solid 5px white;
+    }
     .message{
         
         font-family: 'Montserrat', sans-serif;
@@ -13,4 +22,43 @@
             margin: 1.5em;
         }
     }
+}
+}
+
+@media only screen and (max-width: 420px){
+
+
+    .container{
+      
+        text-align: center;
+      
+        display: block;
+       
+       
+
+       .main-img{
+            width: 250px;
+            height: auto;
+            border: solid 5px white;
+            
+          
+        }
+        .message{
+            
+            font-family: 'Montserrat', sans-serif;
+            font-size: large;
+            font-weight: 600;
+            margin: 2em;
+            .title2{
+                margin: 1.5em;
+            }
+        }
+    }
+
+
+
+
+
+
+
 }

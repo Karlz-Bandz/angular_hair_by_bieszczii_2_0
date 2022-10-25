@@ -1,6 +1,6 @@
 .container{
   
-  margin-top: 1em;
+  margin-top: 1.8em;
   // border: solid;
   // border-width: 1px;
    padding: 1.5em;
@@ -15,7 +15,7 @@
         text-align: center;
       
         .record{
-          margin-top: 50px;
+          margin-top: 20px;
         
         img{
           height: 50px;
@@ -25,12 +25,12 @@
 
         .zero{
          // border: 1px solid;
-          margin: 15px;
+          margin: 0px;
 
         }
         .first{
          // border: 1px solid;
-          margin: 15px;
+          margin: 0px;
           a{
             text-decoration: none;
             color: black;
@@ -39,6 +39,8 @@
             color: #FF9898;
           }
         }
+
+        padding-bottom: 50px;
 
       }
 

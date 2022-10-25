@@ -11,15 +11,23 @@
 
 
     <div class="records" *ngFor="let lists of prices">
-
+     <br>
     <div class="record">
+        
         <div class="serwis">
             {{lists.name}}
         </div>
-        <br><br>
         <div class="price">
             {{lists.price}}
         </div>
+        
+        <br><br>
+       
+       
+    </div>
+    <div class="description">
+        {{lists.description}}
+        <br><br>
     </div>
         
     </div>

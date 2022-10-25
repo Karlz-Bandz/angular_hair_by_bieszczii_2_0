@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular_hair_by_bieszczii_2_1';
+
+
+
+     
+
+
+
+
+
+
+
 }
