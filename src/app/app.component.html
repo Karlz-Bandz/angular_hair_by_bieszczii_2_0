@@ -1,12 +1,12 @@
 
 <br><br><br><br><br><br><br><br><br>
 <div class="main">
-    <div class="title"><a routerLink="/">Hair by Bieszczii</a><img src="assets\svg\scissors.svg" class="mobile-menu" id="mobile-menu-class" alt="mobile-menu-bar"></div>
+    <div class="title"><a routerLink="/">Hair by Bieszczii</a><a (click)="toggleMenu()"><img src="assets\svg\scissors.svg" class="mobile-menu" id="mobile-menu-class" alt="mobile-menu-bar"></a></div>
    
          <br>
          <hr>
-         <div class="navbar" id="navbar-script">
-            <div class="exit-icon"><img class="exit-icon2" id="exit-icon-script" alt="exit-img" src="assets\svg\x.svg" ></div>
+         <div class="navbar">
+            
              
                    <ul class="nav_links">
                          <li><a routerLink="/about">O mnie</a></li>
@@ -16,6 +16,26 @@
                    </ul>
              
           </div>
+
+
+
+
+          <div *ngIf="isMenuOpen" class="navbar_mobile">
+            <a (click)="hideMenu()"><img class="exit-icon" alt="exit-img" src="assets\svg\x.svg" ></a>
+             
+                   <ul class="nav_links_mobile">
+                         <li><a (click)="hideMenu()" routerLink="/about">O mnie</a></li>
+                         <li><a (click)="hideMenu()" routerLink="/gallery">Galeria</a></li>
+                         <li><a (click)="hideMenu()" routerLink="/pricelist">Cennik</a></li>
+                         <li><a (click)="hideMenu()" routerLink="/contact">Kontakt</a></li>
+                   </ul>
+             
+          </div>
+
+
+
+
+
    
 </div>
 <div class="footer-main">
@@ -29,18 +49,7 @@
          <a href="https://www.instagram.com/karls.bands/" class="copy" target="_blank">Copyright &copy; 2022 Karol Melak</a>
       
 </div>
-<script>
 
-
-const mobileBtn = document.getElementById('mobile-menu-class');
-nav = document.querySelector('nav');
-mobileBtnExit = document.getElementById('exit-icon-script');
-
-mobileBtn.addEventListener('click', () => {
-      nav.classList.add('navbar-script');
-})
-
-</script>
 
    <router-outlet></router-outlet>
 
