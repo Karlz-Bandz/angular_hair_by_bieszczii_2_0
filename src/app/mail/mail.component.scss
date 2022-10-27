@@ -1,8 +1,13 @@
+
+
+@media only screen and (min-width: 420px){
+
 .container{
 
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     background-color: white;
+    margin-top: 180px;
    
    
     .small-container{
@@ -91,4 +96,113 @@
         
             
     
+}
+}
+
+@media only screen and (max-width: 420px){
+
+
+    .container{
+
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        //background-color: white;
+     
+        margin-top: 40px;
+       
+       
+        .small-container{
+    //border: solid 1px black;
+    position: relative;
+    padding-bottom: 90px;
+    padding-top: 0px;
+    
+
+  
+            
+                    
+            h2{
+                font-weight: 900;
+                
+            }
+    
+    
+                .in{
+                    margin: 20px;
+                    
+                    
+                }
+    
+            
+               
+    
+                label{
+                    font-weight: 600;
+                }
+    
+            .info{
+                background-color: #E0E0E0;
+              //  border: 0.5px solid black;
+              outline: 0;
+              //border: 1px solid black;
+              
+            }
+            .info:hover{
+                background-color:  #D0D0D0;
+            }
+            .info:focus{
+                background-color: white;
+               // border: 0.5px solid papayawhip;
+            }
+            textarea{
+                min-height: 200px;
+                min-width: 260px;
+            }
+            .recap_container{
+                text-align: center;
+                
+               
+            }
+            .recap{
+                display: inline-block;
+                margin-top: 5px;
+                
+            }
+            .btn{
+                display: inline-block;
+                
+                
+                width: 90px;
+                height: 25px;
+                outline: 0;
+                border: 0.5px solid black;
+    
+                margin: 2%;
+                margin-bottom: 80px;
+                
+               
+                
+                
+            }
+            .btn:hover{
+                background-color: beige;
+                outline: 0;
+                border: 0.5px solid black;
+            }
+    
+            .ErrorCaptchaMessage{
+                color: red;
+                font-weight: 700;
+            }
+    
+    
+            
+            
+        }
+    
+            
+                
+        
+    }
+
 }

@@ -16,7 +16,7 @@ export class PhotosService {
   
 
   public getImagesNoProfil(): Observable<Photo[]>{
-     return this.http.get<Photo[]>(`${this.apiServerUrl}/image/noprofil`);
+     return this.http.get<Photo[]>(`${this.apiServerUrl}/image/all`);
   }
 
 

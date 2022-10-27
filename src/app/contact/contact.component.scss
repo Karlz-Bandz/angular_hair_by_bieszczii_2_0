@@ -4,13 +4,10 @@
 
 .container{
   
-  margin-top: 1.8em;
-  // border: solid;
-  // border-width: 1px;
-   padding: 1.5em;
+  margin-top: 14em;
+ 
    height: 140px;
-        margin-right: 20%;
-        margin-left: 20%;
+        
          
         font-family: 'Montserrat', sans-serif;
         font-size: large;
@@ -28,12 +25,12 @@
        
 
         .zero{
-         // border: 1px solid;
+         
           margin: 0px;
 
         }
         .first{
-         // border: 1px solid;
+        
           margin: 0px;
           a{
             text-decoration: none;
@@ -55,30 +52,12 @@
 }
 }
 
-/*.footer{
-  // position: relative;
-   bottom: 0;
-top: 98%;
-   .imagesFooter{
-  .imageFooter{
-   width: 40px;
-   height: auto;
-   margin: 4px;
-  }}
-  
-  .signFooter{
-  .sign{
-   
-   font-family: 'Montserrat', sans-serif;
-   font-weight: 600;
-  }}
- }*/
 
- @media only screen and (max-width: 420px){
+
+ @media only screen and (max-width: 420px) and (min-width: 281px){
 .container{
-  margin-top: 0px;
-  // border: solid;
-  // border-width: 1px;
+  margin-top: 10em;
+  
    padding: 0em;
    height: 140px;
         margin-right: 10%;
@@ -94,7 +73,8 @@ top: 98%;
 
 
   .record{
-   // margin-top: 4px;
+    margin: 2em;
+   
   
   img{
     height: 30px;
@@ -103,12 +83,12 @@ top: 98%;
  
 
   .zero{
-   // border: 1px solid;
+ 
     margin: 0px;
 
   }
   .first{
-   // border: 1px solid;
+  
     margin: 0px;
     a{
       text-decoration: none;
@@ -124,6 +104,60 @@ top: 98%;
 }
 }
 
+
+
+}
+
+@media only screen and  (max-width: 281px){
+
+  .container{
+    margin-top: 14em;
+    
+     padding: 0em;
+     height: 140px;
+          margin-right: 10%;
+          margin-left: 10%;
+           
+          font-family: 'Montserrat', sans-serif;
+          font-size: small;
+          font-weight: 600;
+  
+          text-align: center;
+        
+   
+  
+  
+    .record{
+      margin: 1em;
+     
+    
+    img{
+      height: 24px;
+      width: auto;
+    }
+   
+  
+    .zero{
+   
+      margin: 0px;
+  
+    }
+    .first{
+    
+      margin: 0px;
+      a{
+        text-decoration: none;
+        color: black;
+      }
+      .local:hover{
+        color: #FF9898;
+      }
+    }
+  
+    padding-bottom: 50px;
+  
+  }
+  }
 
 
 }

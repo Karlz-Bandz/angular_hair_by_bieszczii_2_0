@@ -3,6 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    background-color: #F4D4C8;
+    scroll-margin-bottom: 400px;
+}
 
 
 
@@ -14,31 +21,20 @@
 
 @media only screen and (min-width: 420px){
 
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      
-       background-color: #F4D4C8;
-       scroll-margin-bottom: 400px;
-    }
 
 
 .main{
 
     display: block;
     margin: 0em;
-    //text-align: center;
-    //cursor: pointer;
-    padding-top: 50px ;
-    
+    padding-top: 30px ;
     position: fixed;
     top: 0px;
     z-index: 2;
     width: 100%;
     left: 50%;
     transform: translate(-50%, 0);
-    height: 200px;
+    height: 140px;
     opacity: 0.8;
     
     
@@ -147,20 +143,24 @@ hr{
 }
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 420px) and (min-width:281px) {
 
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        //background-color: #FFE4E4;
-       background-color: #F4D4C8;
-       scroll-margin-bottom: 400px;
-    }
 
 
 
     .main{
+        
+        display: block;
+        margin: 0em;
+        cursor: pointer;
+        position: fixed;
+        top: 0px;
+        z-index: 999;
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        height: 66px;
+        opacity: 0.96;
 
        
 
@@ -170,7 +170,6 @@ hr{
         }
         .navbar_mobile{
             opacity: 0.95;
-            //display: none;
             position: fixed;
             z-index: 999;
             width: 66%;
@@ -186,7 +185,7 @@ hr{
             }
 
            .exit-icon{
-                width: 50px;
+                width: 40px;
                 height: auto;
                 margin-top: 0.2em;
                 background-color: white;
@@ -221,20 +220,8 @@ hr{
 
         }
       
-        display: block;
-        margin: 0em;
-        //text-align: center;
-        cursor: pointer;
-        //padding-top: 10px ;
-        
-        position: fixed;
-        top: 0px;
-        z-index: 999;
-        width: 100%;
-        left: 50%;
-        transform: translate(-50%, 0);
-        height: 66px;
-       // opacity: 0.8;
+       
+      
 
       
 
@@ -244,6 +231,7 @@ hr{
             font-size: 1.9em;
             cursor: pointer;
             margin-top: 15px;
+            margin-bottom: 0px;
             
 
             .mobile-menu{
@@ -281,6 +269,7 @@ hr{
         bottom: 0;
         display: inline-block;
         opacity: 0.8;
+        z-index: 1;
         
         
         
@@ -308,6 +297,168 @@ hr{
             }
         
     }
+}
+
+@media only screen and (max-width: 281px) {
+
+
+
+
+    .main{
+           
+        display: block;
+        margin: 0em;
+       
+        cursor: pointer;
+       
+        
+        position: fixed;
+        top: 0px;
+        z-index: 999;
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        height: 50px;
+        opacity: 0.95;
+
+       
+
+
+        hr{
+            display: none;
+        }
+        .navbar_mobile{
+            opacity: 0.95;
+            //display: none;
+            position: fixed;
+            z-index: 999;
+            width: 66%;
+            right: 0;
+            top: 0;
+            background: white;
+            height: 100vh;
+            padding: 1em;
+            .nav_links_mobile{
+                background-color: white;
+                list-style-type: none;
+                margin-top: 10em;
+            }
+
+           .exit-icon{
+                width: 30px;
+                height: auto;
+                margin-top: 0.2em;
+                background-color: white;
+                float: right;
+                .exit-icon2{
+                    background-color: white;
+                    padding: 5px;
+                   
+                }
+            }
+
+            li{
+                background-color: white;
+                margin-top: 4em;
+                text-align: right;
+              
+                
+                a{
+                    color: black;
+                    text-decoration: none;
+                    background-color: white;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 17px;
+                    font-weight: 700;
+                    margin: 1.5em;
+                    &:hover{
+                        font-weight: bold;
+                        color: pink;
+                    }
+                }
+            }
+
+        }
+   
+
+      
+
+        .title{
+            font-family: 'Aboreto', cursive;
+            
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 15px;
+            margin-bottom: 0px;
+            
+
+            .mobile-menu{
+                float: right;
+                margin-right: 16px;
+                //margin-left: 40px;
+            
+                
+                width: 30px;
+               
+            }
+            
+            
+            
+            a{
+                text-decoration: none;
+                color: black;
+                margin-left: 0.5em ;
+            
+            
+            }
+            
+           
+        
+        }
+        
+    }
+    .navbar{
+        display: none;
+    }
+   
+    .footer-main{
+        position:fixed;
+        width:100%;
+        bottom: 0;
+        display: inline-block;
+        opacity: 0.8;
+        z-index: 1;
+        
+        
+        
+        
+           .image-footer{
+               width: 29px;
+               height: auto;
+               border-radius: 15%;
+               margin: 3px;
+               
+           }
+           
+        
+        
+            .copy{
+              float: right;  
+              padding-top: 24px;
+              padding-right: 5px;
+              font-family: 'Montserrat', sans-serif;
+              font-weight: 600;
+              font-size: small;
+              text-decoration: none;
+              color: black;
+              
+            }
+        
+    }
+
+
+
+
 }
 
 
