@@ -1,5 +1,7 @@
+
+@media only screen and (min-width: 420px) {
 .container{
-    margin-top: 8em;
+    margin-top: 18em;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 
@@ -21,4 +23,32 @@
         color: red;
     }
 
+}
+}
+
+@media only screen and (max-width: 420px) {
+    .container{
+        margin-top: 17em;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+    
+        a{
+            text-decoration: none;
+            color: red;
+            font-weight: 700;
+        }
+        .link{
+            color: black;
+        }
+        .link:hover{
+            color: #FF9898;
+        }
+        h2{
+            color: red;
+        }
+        span{
+            color: red;
+        }
+    
+    }
 }

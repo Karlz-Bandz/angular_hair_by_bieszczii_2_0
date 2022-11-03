@@ -1,12 +1,42 @@
 
 @media only screen and (min-width: 770px) {
 .container{
-    margin-top: 14em;
+    margin-top: 10em;
     padding: 2em;
     
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 130px;
 
+
+.btnContainer{
+text-align: center;
+margin-bottom: 20px;
+
+   
+   
+   a{
+    font-weight: 600;
+    font-size: 20px;
+   }
+    .button{
+    width: 110px;
+    height: 60px;
+    border-radius: 90%;
+    margin: 1em;
+    filter: brightness(96%);
+    border: none;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+   }
+   .button:hover{
+    filter: brightness(100%);
+   }
+}
+
+
+
+   
     
     .small-container{
         
@@ -89,12 +119,38 @@
 @media only screen and (max-width: 1025px) and (min-width: 420px){
 
     .container{
-        margin-top: 13em;
+        margin-top: 10em;
    
         padding: 2em;
         
         font-family: 'Montserrat', sans-serif;
         margin-bottom: 130px;
+
+        .btnContainer{
+            text-align: center;
+            margin-bottom: 20px;
+            
+               
+               
+               a{
+                font-weight: 600;
+                font-size: 20px;
+               }
+                .button{
+                width: 110px;
+                height: 60px;
+                border-radius: 90%;
+                margin: 1em;
+                filter: brightness(96%);
+                border: none;
+                font-weight: 600;
+                font-size: 20px;
+                font-family: 'Montserrat', sans-serif;
+               }
+               .button:hover{
+                filter: brightness(100%);
+               }
+            }
     
         
         .small-container{
@@ -191,11 +247,40 @@
         
         font-family: 'Montserrat', sans-serif;
         margin-bottom: 130px;
+
+        .btnContainer{
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 90px;
+           
+            
+               
+               
+               a{
+                font-weight: 600;
+                font-size: 20px;
+               }
+                .button{
+                width: 110px;
+                height: 60px;
+                border-radius: 20%;
+                margin: 1em;
+                filter: brightness(96%);
+                border: 1px solid black;
+                font-weight: 600;
+                font-size: 15px;
+                font-family: 'Montserrat', sans-serif;
+               }
+               .button:hover{
+                filter: brightness(100%);
+               }
+            }
     
         
         .small-container{
+            display: none;
             
-            height: 140px;
+            height: 100px;
             margin-right: 20%;
             margin-left: 20%;
             font-size: 25px;
@@ -287,12 +372,42 @@
 
 
 
+
+
         margin-top: 0em;
        
         padding: 0em;
         
         font-family: 'Montserrat', sans-serif;
         margin-bottom: 130px;
+
+        .btnContainer{
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 70px;
+           
+            
+               
+               
+               a{
+                font-weight: 600;
+                font-size: 20px;
+               }
+                .button{
+                width:80px;
+                height: 40px;
+                border-radius: 20%;
+                margin: 0.5em;
+                filter: brightness(96%);
+                border: 1px solid black;
+                font-weight: 600;
+                font-size: 15px;
+                font-family: 'Montserrat', sans-serif;
+               }
+               .button:hover{
+                filter: brightness(100%);
+               }
+            }
     
         
         .small-container{
@@ -301,6 +416,7 @@
             margin-right: 20%;
             margin-left: 20%;
             font-size: 25px;
+            display: none;
             
             
             .serwis-title{

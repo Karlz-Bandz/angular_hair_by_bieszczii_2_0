@@ -14,9 +14,22 @@ export class PriceListComponent implements OnInit {
               private rout: Router) { }
 
   public prices: Price[] = [];
+  public treatmentPrices: Price[] = [];
+
+  public isValid: boolean = true;
+  public btnName: string = "Zabiegi";
 
   ngOnInit(): void {
     this.getPricesLists();
+  }
+
+  public changeViewOnTreatment(): void{
+       this.btnName = "Usługi";
+       this.isValid = false;
+  }
+  public changeViewOnPriceList(): void{
+    this.btnName = "Zabiegi";
+    this.isValid = true;
   }
 
   public getPricesLists(): void{
@@ -26,6 +39,13 @@ export class PriceListComponent implements OnInit {
                           this.rout.navigate(['error/main'])},
         () => console.log("Done!")
     );
+
+    this.priceServis.getTreatments().subscribe(
+      (response: Price[]) => this.treatmentPrices = response,
+      (error: any) => {console.log(error);
+                        this.rout.navigate(['error/main'])},
+      () => console.log("Done!")
+  );
   }
 
 }

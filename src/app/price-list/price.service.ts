@@ -16,4 +16,8 @@ export class PriceService {
   public getPrices(): Observable<Price[]>{
     return this.http.get<Price[]>(`${this.apiServerUrl}/price/list`);
   }
+
+  public getTreatments(): Observable<Price[]>{
+    return this.http.get<Price[]>(`${this.apiServerUrl}/treatments/list`);
+  }
 }

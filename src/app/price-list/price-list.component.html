@@ -1,5 +1,10 @@
 <div class="container">
 
+   
+    
+    <div *ngIf="isValid">
+    <div class="btnContainer"><a>Zobacz też: </a><button class="button" (click)="changeViewOnTreatment()">{{btnName}}</button></div>
+
     <div class="small-container">
     <div class="serwis-title">
         Usługi
@@ -11,6 +16,7 @@
 
 
     <div class="records" *ngFor="let lists of prices">
+        
      <br>
     <div class="record">
         
@@ -31,4 +37,45 @@
     </div>
         
     </div>
+    <br><br>
+    <div class="btnContainer"><a>Zobacz też: </a><button class="button" (click)="changeViewOnTreatment()">{{btnName}}</button></div>
+
+    </div>
+    
+    <div *ngIf="!isValid">
+        <div class="btnContainer"><a>Zobacz też: </a><button class="button" (click)="changeViewOnPriceList()">{{btnName}}</button></div>
+    <div class="small-container">
+        <div class="serwis-title">
+            Zabiegi
+        </div>
+        <div class="price-title">
+            Cena
+        </div>
+        </div>
+    
+    
+        <div class="records" *ngFor="let treatmentLists of treatmentPrices">
+         <br>
+        <div class="record">
+            
+            <div class="serwis">
+                {{treatmentLists.name}}
+            </div>
+            <div class="price">
+                {{treatmentLists.price}}
+            </div>
+            
+            <br><br>
+           
+           
+        </div>
+        <div class="description">
+            {{treatmentLists.description}}
+            <br><br>
+        </div>
+            
+        </div>
+        <br><br>
+        <div class="btnContainer"><a>Zobacz też: </a><button class="button" (click)="changeViewOnPriceList()">{{btnName}}</button></div>
+        </div>
 </div>
