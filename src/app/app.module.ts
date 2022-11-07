@@ -1,6 +1,6 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -16,9 +16,19 @@ import { SuccessMessageComponent } from './success-message/success-message.compo
 import { ErrorMessageComponent } from './error-message/error-message.component';
 import { ErrorComponent } from './error/error.component';
 import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 
+const routes: Routes = [{path: '', component: MainComponent},
+{path: 'about', component: AboutComponent},
+{path: 'gallery', component: PhotosComponent},
+{path: 'pricelist', component: PriceListComponent},
+{path: 'contact', component: ContactComponent},
+{path: 'mail', component: MailComponent},
+{path: 'success', component: SuccessMessageComponent},
+{path: 'error', component: ErrorMessageComponent},
+{path: 'error/main', component: ErrorComponent}];
 
 
 @NgModule({
@@ -40,20 +50,10 @@ import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
     FormsModule,
     RecaptchaModule,
     RecaptchaFormsModule,
-    RouterModule.forRoot([
-      {path: '', component: MainComponent},
-      {path: 'about', component: AboutComponent},
-      {path: 'gallery', component: PhotosComponent},
-      {path: 'pricelist', component: PriceListComponent},
-      {path: 'contact', component: ContactComponent},
-      {path: 'mail', component: MailComponent},
-      {path: 'success', component: SuccessMessageComponent},
-      {path: 'error', component: ErrorMessageComponent},
-      {path: 'error/main', component: ErrorComponent}
-    ])
+    RouterModule.forRoot(routes)
   ],
   providers: [
- 
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [
     AppComponent

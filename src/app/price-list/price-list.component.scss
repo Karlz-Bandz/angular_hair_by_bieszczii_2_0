@@ -7,6 +7,16 @@
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 130px;
 
+    .info{
+        text-align: center;
+        
+        
+        a{
+            margin-bottom:2em; 
+            font-weight: 600;
+        }
+    }
+
 
 .btnContainer{
 text-align: center;
@@ -125,6 +135,16 @@ margin-bottom: 20px;
         
         font-family: 'Montserrat', sans-serif;
         margin-bottom: 130px;
+        
+        .info{
+            text-align: center;
+            
+            
+            a{
+                margin-bottom:2em; 
+                font-weight: 600;
+            }
+        }
 
         .btnContainer{
             text-align: center;
@@ -248,10 +268,23 @@ margin-bottom: 20px;
         font-family: 'Montserrat', sans-serif;
         margin-bottom: 130px;
 
+        .info{
+            text-align: center;
+            margin-top: 90px;
+            
+            a{
+                margin-bottom:0em; 
+                font-weight: 600;
+            }
+        }
+        .helper{
+            margin-top: 90px;
+        }
+
         .btnContainer{
             text-align: center;
             margin-bottom: 20px;
-            margin-top: 90px;
+            margin-top: 0px;
            
             
                
@@ -380,6 +413,19 @@ margin-bottom: 20px;
         
         font-family: 'Montserrat', sans-serif;
         margin-bottom: 130px;
+
+        .info{
+            text-align: center;
+            margin-top: 90px;
+            
+            a{
+                margin-bottom:0em; 
+                font-weight: 600;
+            }
+        }
+        .helper{
+            margin-top: 160px;
+        }
 
         .btnContainer{
             text-align: center;
