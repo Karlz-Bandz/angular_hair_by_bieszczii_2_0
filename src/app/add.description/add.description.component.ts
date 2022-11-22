@@ -15,6 +15,11 @@ export class AddDescriptionComponent implements OnInit {
 
   clients: Client[] = [];
   client: Client | undefined;
+  // selectedOption: string | undefined 
+  chosenObj: any;
+
+  //selectedTeam: number | undefined;
+ 
   
 
   constructor(private addDescriptionService: AddDescriptionService) { }
@@ -23,6 +28,13 @@ export class AddDescriptionComponent implements OnInit {
     this.getClients();
   }
 
+ 
+
+  hello(): void{
+    console.log(this.chosenObj.id);
+  }
+
+ 
   
 
 
@@ -34,11 +46,9 @@ export class AddDescriptionComponent implements OnInit {
      );
   }
 
-  public changeStatus(ngForm: NgForm): void{
-    this.client = ngForm.value;
 
-    console.log(this.client);
-  }
+
+  
 
   
 

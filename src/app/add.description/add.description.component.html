@@ -2,13 +2,31 @@
     <div class="subcontainer">
 
 
-        <form #describeForm="ngForm">
+    
+        
+<form #form="ngForm" (ngSubmit)="hello()">
+       <select [(ngModel)]="chosenObj" [ngModelOptions]="{standalone: true}">
+    <option *ngFor="let data of clients" [ngValue]="data">
+      {{ data.clientName }} {{data.clientSurname}}
+    </option>
+  </select>
 
-        <select class="select" name="client" #status="ngModel" ngModel (ngModelChange)="changeStatus(describeForm)">
-            <option class="select2" *ngFor="let client of clients" [ngValue]="client">{{client.clientName}} {{client.clientSurname}}</option>
-        </select>
+<button type="submit">Ok</button>
+</form>
 
-        </form>
+  
+
+       
+
+       
+
+
+
+       
+        <!-- <label for="bodyMail">Wpisz opis: </label><br><br>
+        <textarea class="description" type="text" name="description" ngModel required></textarea> -->
+
+       
         
 
 
