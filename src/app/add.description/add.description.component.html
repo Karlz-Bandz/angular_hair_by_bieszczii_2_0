@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="subcontainer">
+
+
+        <form #describeForm="ngForm">
+
+        <select class="select" name="client" #status="ngModel" ngModel (ngModelChange)="changeStatus(describeForm)">
+            <option class="select2" *ngFor="let client of clients" [ngValue]="client">{{client.clientName}} {{client.clientSurname}}</option>
+        </select>
+
+        </form>
+        
+
+
+
+
+
+
+
+    </div>
+</div>

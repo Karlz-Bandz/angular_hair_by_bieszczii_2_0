@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -17,6 +17,10 @@ import { ErrorMessageComponent } from './error-message/error-message.component';
 import { ErrorComponent } from './error/error.component';
 import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './admin/home/home.component';
+import { AddClientComponent } from './add.client/add.client.component';
+import { AddDescriptionComponent } from './add.description/add.description.component';
 
 
 
@@ -28,7 +32,11 @@ const routes: Routes = [{path: '', component: MainComponent},
 {path: 'mail', component: MailComponent},
 {path: 'success', component: SuccessMessageComponent},
 {path: 'error', component: ErrorMessageComponent},
-{path: 'error/main', component: ErrorComponent}];
+{path: 'error/main', component: ErrorComponent},
+{path: 'login', component: LoginComponent},
+{path: 'admin/home', component: HomeComponent},
+{path: 'add/client', component: AddClientComponent},
+{path: 'add/description', component: AddDescriptionComponent}];
 
 
 @NgModule({
@@ -42,7 +50,11 @@ const routes: Routes = [{path: '', component: MainComponent},
     MailComponent,
     SuccessMessageComponent,
     ErrorMessageComponent,
-    ErrorComponent
+    ErrorComponent,
+    LoginComponent,
+    HomeComponent,
+    AddClientComponent,
+    AddDescriptionComponent
   ],
   imports: [
     BrowserModule,

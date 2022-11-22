@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="subcontainer">
+        <h2>Dodaj klienta</h2> <br>
+
+
+  <form #clientForm="ngForm" (ngSubmit)="addNewClient(clientForm.value)" ngNativeValidate>
+    
+        <div class="in">
+        <label for="name">Imię: </label>
+        <input class="info" type="text" name="clientName" placeholder="Wpisz imię" ngModel required>
+        </div>
+    
+        <div class="in">
+        <label for="surname">Nazwisko: </label>
+        <input class="info" type="text" name="clientSurname" placeholder="Wpisz nazwisko"  ngModel required>
+        </div>
+    
+        <div class="in">
+          <br>
+        <label for="phone">Telefon: </label><br><br>
+        <input class="info" type="text" name="phoneNumber" placeholder="Wpisz telefon" ngModel required>
+        </div>
+
+        
+         <input class="btn" type="submit" value="Dodaj">
+
+        
+        
+        
+        
+        
+    
+    
+    
+  </form>
+    </div>
+</div>
