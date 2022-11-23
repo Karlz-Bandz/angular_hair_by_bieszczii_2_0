@@ -5,6 +5,8 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { AddDescriptionService } from './add.description.service';
 import { Client } from './client';
+import { Description } from './description';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-add.description',
@@ -15,14 +17,17 @@ export class AddDescriptionComponent implements OnInit {
 
   clients: Client[] = [];
   client: Client | undefined;
-  // selectedOption: string | undefined 
-  chosenObj: any;
-
-  //selectedTeam: number | undefined;
  
+  descriptionText: string | undefined;
+
+  selected: any;
+
+ 
+ private apiUrl = environment.apiBaseUrl;
   
 
-  constructor(private addDescriptionService: AddDescriptionService) { }
+  constructor(private addDescriptionService: AddDescriptionService,
+   private http: HttpClient ) { }
 
   ngOnInit(): void {
     this.getClients();
@@ -30,8 +35,16 @@ export class AddDescriptionComponent implements OnInit {
 
  
 
-  hello(): void{
-    console.log(this.chosenObj.id);
+  hello(mailForm: {id: number, descrption: string}): void{
+   
+    console.log(mailForm);
+    
+
+    this.http.post(`${this.apiUrl}/api/client/description`, mailForm).subscribe(
+      () => console.log("Done:)")
+    );
+
+    
   }
 
  

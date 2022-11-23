@@ -2,17 +2,36 @@
     <div class="subcontainer">
 
 
-    
-        
-<form #form="ngForm" (ngSubmit)="hello()">
-       <select [(ngModel)]="chosenObj" [ngModelOptions]="{standalone: true}">
-    <option *ngFor="let data of clients" [ngValue]="data">
-      {{ data.clientName }} {{data.clientSurname}}
-    </option>
-  </select>
 
-<button type="submit">Ok</button>
+<form #mailForm="ngForm" (ngSubmit)="hello(mailForm.value)" ngNativeValidate>
+    
+  <div class="in">
+  <label for="clientOption">Email: </label>
+  
+  <select name="id" ngModel>
+    <option *ngFor="let data of clients" [value]="data.id">{{data.clientName}}</option>
+  </select>
+  </div>
+ 
+
+
+
+  <div class="in">
+    <br>
+  <label for="bodyMail">Wiadomość: </label><br><br>
+  <textarea class="info" type="text" name="description" placeholder="W czym mogę Ci pomóc?" ngModel required></textarea>
+  </div>
+
+
+
+  <input class="btn" type="submit" value="Wyślij">
 </form>
+
+
+
+
+
+
 
   
 

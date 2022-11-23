@@ -11,7 +11,7 @@ import { PhotosComponent } from './photos/photos.component';
 import { PriceListComponent } from './price-list/price-list.component';
 import { ContactComponent } from './contact/contact.component';
 import { MailComponent } from './mail/mail.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SuccessMessageComponent } from './success-message/success-message.component';
 import { ErrorMessageComponent } from './error-message/error-message.component';
 import { ErrorComponent } from './error/error.component';
@@ -60,6 +60,7 @@ const routes: Routes = [{path: '', component: MainComponent},
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     RecaptchaModule,
     RecaptchaFormsModule,
     RouterModule.forRoot(routes)
