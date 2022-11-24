@@ -7,6 +7,8 @@ import { AddDescriptionService } from './add.description.service';
 import { Client } from './client';
 import { Description } from './description';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ClientSelect } from './clientSelect';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add.description',
@@ -15,7 +17,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class AddDescriptionComponent implements OnInit {
 
-  clients: Client[] = [];
+  clients: ClientSelect[] = [];
   client: Client | undefined;
  
   descriptionText: string | undefined;
@@ -27,7 +29,8 @@ export class AddDescriptionComponent implements OnInit {
   
 
   constructor(private addDescriptionService: AddDescriptionService,
-   private http: HttpClient ) { }
+   private http: HttpClient,
+   private rout: Router) { }
 
   ngOnInit(): void {
     this.getClients();
@@ -41,7 +44,7 @@ export class AddDescriptionComponent implements OnInit {
     
 
     this.http.post(`${this.apiUrl}/api/client/description`, mailForm).subscribe(
-      () => console.log("Done:)")
+      () => this.rout.navigate(['admin/home'])
     );
 
     
@@ -54,7 +57,7 @@ export class AddDescriptionComponent implements OnInit {
   public getClients(): void{
 
      this.addDescriptionService.getClients().subscribe(
-         (response: Client[]) => this.clients = response,
+         (response: ClientSelect[]) => this.clients = response,
          () => console.log("Done")
      );
   }

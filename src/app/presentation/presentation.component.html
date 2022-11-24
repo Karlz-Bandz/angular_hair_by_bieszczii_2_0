@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="subcontainer">
+
+
+
+<form #mailForm="ngForm">
+    
+  <div class="in">
+  <label for="clientOption">Email: </label>
+  
+  <select name="id" ngModel>
+    <option *ngFor="let data of clients" [value]="data.id">{{data.clientSurname}} {{data.clientName}}</option>
+  </select>
+  </div>
+ 
+
+
+
+ 
+
+
+
+  
+</form>
+
+
+
+
+
+
+
+  
+
+       
+
+       
+
+
+
+       
+
+
+       
+        
+
+
+
+
+
+
+
+    </div>
+</div>
+

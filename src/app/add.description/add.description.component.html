@@ -9,7 +9,7 @@
   <label for="clientOption">Email: </label>
   
   <select name="id" ngModel>
-    <option *ngFor="let data of clients" [value]="data.id">{{data.clientName}}</option>
+    <option *ngFor="let data of clients" [value]="data.id">{{data.clientSurname}} {{data.clientName}}</option>
   </select>
   </div>
  
@@ -19,7 +19,7 @@
   <div class="in">
     <br>
   <label for="bodyMail">Wiadomość: </label><br><br>
-  <textarea class="info" type="text" name="description" placeholder="W czym mogę Ci pomóc?" ngModel required></textarea>
+  <textarea class="description" type="text" name="description" placeholder="W czym mogę Ci pomóc?" ngModel required></textarea>
   </div>
 
 

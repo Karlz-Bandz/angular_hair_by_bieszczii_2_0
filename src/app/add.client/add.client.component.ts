@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -9,7 +10,8 @@ import { environment } from 'src/environments/environment';
 })
 export class AddClientComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+    private rout: Router) { }
 
   apiUrl = environment.apiBaseUrl;
 
@@ -22,7 +24,7 @@ export class AddClientComponent implements OnInit {
     console.log(clientForm);
 
     this.http.post(this.apiUrl+'/api/client/add', clientForm).subscribe(
-      () => console.log("Done")
+      () => this.rout.navigate(['admin/home'])
     );
 
   }

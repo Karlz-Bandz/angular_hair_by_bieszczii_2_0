@@ -1,4 +1,4 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
@@ -21,6 +21,8 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './admin/home/home.component';
 import { AddClientComponent } from './add.client/add.client.component';
 import { AddDescriptionComponent } from './add.description/add.description.component';
+import { DeleteClientComponent } from './delete.client/delete.client.component';
+import { PresentationComponent } from './presentation/presentation.component';
 
 
 
@@ -36,7 +38,10 @@ const routes: Routes = [{path: '', component: MainComponent},
 {path: 'login', component: LoginComponent},
 {path: 'admin/home', component: HomeComponent},
 {path: 'add/client', component: AddClientComponent},
-{path: 'add/description', component: AddDescriptionComponent}];
+{path: 'add/description', component: AddDescriptionComponent},
+{path: 'delete/client', component: DeleteClientComponent},
+{path: 'presentation', component: PresentationComponent}]
+
 
 
 @NgModule({
@@ -54,7 +59,9 @@ const routes: Routes = [{path: '', component: MainComponent},
     LoginComponent,
     HomeComponent,
     AddClientComponent,
-    AddDescriptionComponent
+    AddDescriptionComponent,
+    DeleteClientComponent,
+    PresentationComponent
   ],
   imports: [
     BrowserModule,

@@ -22,7 +22,11 @@ export class HomeComponent implements OnInit {
   }
 
   goToList(): void{
-    this.router.navigate(['/contact']);
+    this.router.navigate(['presentation']);
+  }
+
+  goToDelete(): void{
+    this.router.navigate(['delete/client']);
   }
 
 
