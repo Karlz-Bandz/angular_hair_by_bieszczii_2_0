@@ -23,6 +23,7 @@ export class MailComponent implements OnInit {
   }
 
   public responseBool: boolean = true;
+  public response2: boolean = true;
 
 
   public mailSend(mailData: {senderMail: string, subjectMail: string, bodyMail: string, recaptchaResponse: string}): void{
@@ -30,8 +31,11 @@ export class MailComponent implements OnInit {
      if(mailData.recaptchaResponse === ''){
      // this.rout.navigate(['/error'])
      this.responseBool = false;
+     
      console.log("Error");
      }else{
+
+      this.response2 = false;
       this.http.post(`${this.apiServer}/mail/test`, mailData).subscribe(
         
         data => this.rout.navigate(['/success']),

@@ -1,58 +1,52 @@
 
-<div class="container">
+<div *ngIf="response2" class="mycontainer">
 
   
 
-<div class="small-container">
+<div  class="small-container">
   
-    <br><br><br><br>
+    
 
       <h2>Napisz do mnie</h2> <br>
 
 
   <form #mailForm="ngForm" (ngSubmit)="mailSend(mailForm.value)" ngNativeValidate>
     
-        <div class="in">
+        <div class="form-group">
         <label for="senderMail">Email: </label>
-        <input class="info" type="email" name="senderMail" placeholder="Wpisz swój e-mail" ngModel required>
+        <input class="form-control form-control-sm" type="email" name="senderMail" placeholder="Wpisz swój e-mail" ngModel required>
         </div>
     
-        <div class="in">
+        <div class="form-group">
         <label for="subjectMail">Temat: </label>
-        <input class="info" type="text" name="subjectMail" placeholder="Podaj temat"  ngModel required>
+        <input class="form-control form-control-sm" type="text" name="subjectMail" placeholder="Podaj temat"  ngModel required>
         </div>
     
-        <div class="in">
-          <br>
-        <label for="bodyMail">Wiadomość: </label><br><br>
-        <textarea class="info" type="text" name="bodyMail" placeholder="W czym mogę Ci pomóc?" ngModel required></textarea>
+        <div class="form-group">
+        <label for="bodyMail">Wiadomość: </label>
+        <textarea class="form-control form-control-sm" type="text" name="bodyMail" placeholder="W czym mogę Ci pomóc?" ngModel required></textarea>
         </div>
 
         <div class="recap_container">
           <re-captcha class="recap" name="recaptchaResponse" siteKey="6Lf8smkiAAAAAJC70ikUtGBS2zqqgMCzcleLlhIe" ngModel></re-captcha>
-          
+          <div *ngIf="!responseBool" class="ErrorCaptcha">
+            <a class="ErrorCaptchaMessage">Proszę o zaznaczenie pola "Nie jestem Robotem"</a>
+          </div>
         </div>
-        <div *ngIf="!responseBool" class="ErrorCaptcha">
-          <a class="ErrorCaptchaMessage">Proszę o zaznaczenie pola "Nie jestem Robotem"</a>
-        </div>
+        
+        <input class="btn btn-dark" type="submit" value="Wyślij">
 
-        <input class="btn" type="submit" value="Wyślij">
+      
 
-        
-        
-        
-        
-        
-    
-    
-    
-  </form>
+</form>
+</div>
+
+</div>
+<div *ngIf="!response2" style="margin-top: 350px;"class="text-center">
+  <div class="spinner-border" role="status">
+    <span class="sr-only"></span>
+  </div>
 </div>
 
 
-
-
-
-
-</div>
 

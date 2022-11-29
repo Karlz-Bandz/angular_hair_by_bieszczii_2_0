@@ -26,6 +26,7 @@ import { PresentationComponent } from './presentation/presentation.component';
 
 
 
+
 const routes: Routes = [{path: '', component: MainComponent},
 {path: 'about', component: AboutComponent},
 {path: 'gallery', component: PhotosComponent},
