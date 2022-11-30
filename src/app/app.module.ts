@@ -23,6 +23,8 @@ import { AddClientComponent } from './add.client/add.client.component';
 import { AddDescriptionComponent } from './add.description/add.description.component';
 import { DeleteClientComponent } from './delete.client/delete.client.component';
 import { PresentationComponent } from './presentation/presentation.component';
+import { ClientSuccessComponent } from './client.success/client.success.component';
+import { ClientErrorComponent } from './client.error/client.error.component';
 
 
 
@@ -41,7 +43,9 @@ const routes: Routes = [{path: '', component: MainComponent},
 {path: 'add/client', component: AddClientComponent},
 {path: 'add/description', component: AddDescriptionComponent},
 {path: 'delete/client', component: DeleteClientComponent},
-{path: 'presentation', component: PresentationComponent}]
+{path: 'presentation', component: PresentationComponent},
+{path: 'client/error', component: ClientErrorComponent},
+{path: 'client/success', component: ClientSuccessComponent}]
 
 
 
@@ -62,7 +66,9 @@ const routes: Routes = [{path: '', component: MainComponent},
     AddClientComponent,
     AddDescriptionComponent,
     DeleteClientComponent,
-    PresentationComponent
+    PresentationComponent,
+    ClientSuccessComponent,
+    ClientErrorComponent
   ],
   imports: [
     BrowserModule,

@@ -19,6 +19,8 @@ export class AddDescriptionComponent implements OnInit {
 
   clients: ClientSelect[] = [];
   client: Client | undefined;
+
+  response2: boolean = true;
  
   descriptionText: string | undefined;
 
@@ -42,9 +44,12 @@ export class AddDescriptionComponent implements OnInit {
    
     console.log(mailForm);
     
+    this.response2 = false;
 
     this.http.post(`${this.apiUrl}/api/client/description`, mailForm).subscribe(
-      () => this.rout.navigate(['admin/home'])
+      () => this.rout.navigate(['admin/home']),
+      (error: any) => this.rout.navigate(['client/error'])
+      
     );
 
     

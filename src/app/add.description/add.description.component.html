@@ -1,14 +1,15 @@
-<div class="container">
-    <div class="subcontainer">
+<div class="mycontainer">
+    <div *ngIf="response2" class="subcontainer">
 
 
 
 <form #mailForm="ngForm" (ngSubmit)="hello(mailForm.value)" ngNativeValidate>
     
-  <div class="in">
-  <label for="clientOption">Email: </label>
+  <div class="form-group">
+  <label for="clientOption"><h3>Klienci:</h3></label>
   
-  <select name="id" ngModel>
+  <select class="form-select" name="id" ngModel>
+    <option value="" selected disabled hidden>-- Wybierz klienta --</option>
     <option *ngFor="let data of clients" [value]="data.id">{{data.clientSurname}} {{data.clientName}}</option>
   </select>
   </div>
@@ -16,16 +17,22 @@
 
 
 
-  <div class="in">
-    <br>
-  <label for="bodyMail">Wiadomość: </label><br><br>
-  <textarea class="description" type="text" name="description" placeholder="W czym mogę Ci pomóc?" ngModel required></textarea>
+  <div class="form-group">
+    
+  <label for="bodyMail"><h3>Opis:</h3></label>
+  <textarea class="form-control" type="text" name="description" placeholder="Dodaj opis" ngModel required></textarea>
   </div>
 
 
 
-  <input class="btn" type="submit" value="Wyślij">
+  <input class="btn btn-dark" type="submit" value="Dodaj">
 </form>
+
+<div *ngIf="!response2" style="margin-top: 350px;"class="text-center">
+  <div class="spinner-border" role="status">
+    <span class="sr-only"></span>
+  </div>
+</div>
 
 
 

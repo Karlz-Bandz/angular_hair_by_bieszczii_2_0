@@ -14,6 +14,7 @@ export class AddClientComponent implements OnInit {
     private rout: Router) { }
 
   apiUrl = environment.apiBaseUrl;
+  response2: boolean = true;
 
   ngOnInit(): void {
   }
@@ -23,8 +24,11 @@ export class AddClientComponent implements OnInit {
 
     console.log(clientForm);
 
+    this.response2 = false;
+
     this.http.post(this.apiUrl+'/api/client/add', clientForm).subscribe(
-      () => this.rout.navigate(['admin/home'])
+      () => this.rout.navigate(['client/success']),
+      (error: any) => this.rout.navigate(['client/error'])
     );
 
   }

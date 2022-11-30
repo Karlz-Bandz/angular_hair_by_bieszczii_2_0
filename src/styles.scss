@@ -34,7 +34,7 @@
     width: 100%;
     left: 50%;
     transform: translate(-50%, 0);
-    height: 140px;
+    height: 90px;
     opacity: 0.8;
     
     
@@ -58,8 +58,11 @@
 
 .navbar{
   
-   margin: 1em;
+   margin: 0em;
    text-align: center;
+   z-index: 99;
+   height: 45px;
+   margin-top: 10px;
 
    .exit-icon{
     display: none;
@@ -109,11 +112,15 @@ hr{
     display: none;
 }
 
-.footer-main{
+.myfooter{
     position:fixed;
     width:100%;
     bottom: 0;
-    display: inline-block;
+    //opacity: 70%;
+    height: 40px;
+    z-index: 99;
+
+    
     
     
     
@@ -123,6 +130,7 @@ hr{
            height: auto;
            border-radius: 15%;
            margin: 3px;
+           box-sizing: border-box;
            
        }
        
@@ -263,7 +271,7 @@ hr{
         display: none;
     }
    
-    .footer-main{
+    .myfooter{
         position:fixed;
         width:100%;
         bottom: 0;
@@ -421,7 +429,7 @@ hr{
         display: none;
     }
    
-    .footer-main{
+    .myfooter{
         position:fixed;
         width:100%;
         bottom: 0;
