@@ -1,3 +1,73 @@
-.container{
-     margin-top: 300px;
+@import "bootstrap/scss/bootstrap";
+
+.mycontainer{
+     margin-top: 200px;
+     text-align: center;
+
+
+     .subcontainer{
+          margin-left: auto;
+          margin-right: auto;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 800;
+
+          label{
+               margin-bottom: 0px;
+          }
+
+          .form-group{
+
+          .form-select{
+               width: 400px;
+               height: 50px;
+               display: inline;
+               
+             
+          }
+
+          .btn-dark{
+               width: 100px;
+               height: 45px;
+               display: inline;
+               //margin-top: 60px;
+               margin-bottom: 3px;
+               margin-left: 3px;
+          }
+     }
+
+          .presentation{
+               text-align: center;
+               
+               
+
+               .number{
+                    width: 400px;
+                    height: 40px;
+                    text-align: center;
+                    background-color: white;
+                    margin-left: auto;
+                    margin-right: auto;
+                   // border-radius: 5%;
+                    margin-top: 20px;
+                    border: solid 0.5px black;
+                    
+               }
+               .description{
+                    width: 400px;
+                    height: auto;
+                    text-align: center;
+                    background-color: white;
+                    //border-radius: 5%;
+                    border: solid 0.5px black;
+                    margin: 4px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+               }
+
+          }
+
+          
+     }
 }

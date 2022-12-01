@@ -18,11 +18,11 @@ import { Router } from '@angular/router';
 export class AddDescriptionComponent implements OnInit {
 
   clients: ClientSelect[] = [];
-  client: Client | undefined;
+  //client: Client | undefined;
 
   response2: boolean = true;
  
-  descriptionText: string | undefined;
+  //descriptionText: string | undefined;
 
   selected: any;
 
@@ -40,13 +40,13 @@ export class AddDescriptionComponent implements OnInit {
 
  
 
-  hello(mailForm: {id: number, descrption: string}): void{
+  hello(descriptionForm: {id: number, descrption: string}): void{
    
-    console.log(mailForm);
+    console.log(descriptionForm);
     
     this.response2 = false;
 
-    this.http.post(`${this.apiUrl}/api/client/description`, mailForm).subscribe(
+    this.http.post(`${this.apiUrl}/api/client/description`, descriptionForm).subscribe(
       () => this.rout.navigate(['admin/home']),
       (error: any) => this.rout.navigate(['client/error'])
       

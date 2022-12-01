@@ -1,26 +1,30 @@
-<div class="container">
+<div class="mycontainer">
     <div class="subcontainer">
 
 
 
-<form #mailForm="ngForm">
+<form #presentationForm="ngForm" (ngSubmit)="getClientDescriptions(presentationForm.value)">
     
-  <div class="in">
-  <label for="clientOption">Email: </label>
+  <div class="form-group">
+  <label for="clientOption"><h3>Baza Klientów</h3></label><br>
   
-  <select name="id" ngModel>
+  <select class="form-select" name="id" ngModel>
     <option *ngFor="let data of clients" [value]="data.id">{{data.clientSurname}} {{data.clientName}}</option>
   </select>
+  <button class="btn btn-dark">Pokaz</button>
   </div>
- 
-
-
-
- 
-
-
 
   
+<div class="presentation">
+<div class="number">
+ Numer telefonu:<br>
+ {{client?.phoneNumber}}
+</div>
+<div class="description" *ngFor="let description of client?.descriptions">
+  {{description.workDate}} {{description.description}}
+</div>
+
+</div>
 </form>
 
 
