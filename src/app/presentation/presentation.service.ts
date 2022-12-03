@@ -21,4 +21,6 @@ export class PresentationService {
   public getClientDescriptions(id: number): Observable<Client>{
     return this.http.get<Client>(`${this.apiUrl}/api/client/show/`+id);
   }
+
+
 }

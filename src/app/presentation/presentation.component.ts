@@ -1,9 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Client } from '../add.description/client';
 import { ClientSelect } from '../add.description/clientSelect';
+import { Description } from '../add.description/description';
 import { PresentationService } from './presentation.service';
 
 @Component({
@@ -16,8 +18,13 @@ export class PresentationComponent implements OnInit {
   clients: ClientSelect[] = [];
   client: Client | undefined;
 
+  
+
+  showSort: boolean = true;
+
   constructor(private http: HttpClient,
-    private presentationService: PresentationService) { }
+    private presentationService: PresentationService,
+    private rout: Router) { }
 
   private apiUrl = environment.apiBaseUrl;
 
@@ -25,6 +32,7 @@ export class PresentationComponent implements OnInit {
 
   ngOnInit(): void {
     this.getSelectClients();
+    
   }
 
   public getSelectClients(): void{
@@ -34,9 +42,63 @@ export class PresentationComponent implements OnInit {
   }
 
   public getClientDescriptions(presentationForm:{id: number}): void{
+    
+    this.flagSort = true;
     this.presentationService.getClientDescriptions(presentationForm.id).subscribe(
       (response: Client) => this.client = response
     );
+  }
+  
+
+
+  flagSort: boolean = true;
+
+  public sortReverse(): void{
+   
+    
+    
+    if(this.flagSort === true){
+    this.client?.descriptions.reverse();
+    this.flagSort = false;
+   }
+
+
+   // this.showSort = false;
+  }
+  public sortNormal(): void{
+    if(this.flagSort === false){
+      this.client?.descriptions.reverse();
+      this.flagSort = true;
+     }
+  }
+
+  public deleteDescription(id: number): void{
+  
+    
+
+    
+
+   // let newId = JSON.stringify({id})
+    console.log(id);
+
+    this.http.get(this.apiUrl+'/api/client/delete/description/'+id).subscribe(
+      () => {
+        let currentUrl = this.rout.url;
+        this.rout.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+            this.rout.navigate([currentUrl]);
+            console.log(currentUrl);
+        });
+      },
+      (error: any) => this.rout.navigate(['client/error'])
+    );
+
+    // this.presentationService.getClientDescriptions(this.clientId).subscribe(
+    //   (response: Client) => this.client = response
+    // );
+
+
+
+  
   }
 
 

@@ -1,31 +1,58 @@
 <div class="mycontainer">
     <div class="subcontainer">
 
+<div class="buttons">
+      <button class="btn btn-dark" (click)="sortReverse()">Sortuj od najstarszej</button>
+      <button class="btn btn-dark" (click)="sortNormal()">Sortuj od najnowszej</button>
 
-
+</div>
+      
 <form #presentationForm="ngForm" (ngSubmit)="getClientDescriptions(presentationForm.value)">
-    
+  
   <div class="form-group">
   <label for="clientOption"><h3>Baza Klientów</h3></label><br>
+
+
+  <!-- <datalist id="data">
+    <option *ngFor="let data of clients" [value]="data.id">{{data.clientName}}</option> 
+  </datalist>
+  <input class="form-control" autocomplete="on" list="data"/> -->
+
   
-  <select class="form-select" name="id" ngModel>
+  <select class="form-control" id="exampleFormControlSelect1" name="id" ngModel>
     <option *ngFor="let data of clients" [value]="data.id">{{data.clientSurname}} {{data.clientName}}</option>
   </select>
   <button class="btn btn-dark">Pokaz</button>
   </div>
 
+</form>
+
   
 <div class="presentation">
+  
 <div class="number">
  Numer telefonu:<br>
- {{client?.phoneNumber}}
+ <!-- <a href="tel: +48-'+c'"> Do zrobienia-->{{client?.phoneNumber}}
 </div>
-<div class="description" *ngFor="let description of client?.descriptions">
-  {{description.workDate}} {{description.description}}
+<div class="description"   *ngFor="let description of client?.descriptions" >
+  <form #presentationForm="ngForm"(click)="deleteDescription(description.id)" >
+  <div class="date">{{description.workDate}}</div> 
+  <div class="hair-text">{{description.description}}</div>
+  
+  <button class="btn btn-dark">usun</button>
+
+</form>
+  
 </div>
 
+
 </div>
-</form>
+
+
+
+
+
+
 
 
 
