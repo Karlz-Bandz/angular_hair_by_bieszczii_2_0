@@ -11,6 +11,8 @@ export class LoginComponent implements OnInit {
 
   login: Login | undefined;
 
+  login2: Login = {userName: 'Karol', userPassword: 'karol'};
+
   constructor(private rout: Router) { }
 
   ngOnInit(): void {
@@ -18,9 +20,13 @@ export class LoginComponent implements OnInit {
 
   public goToAdmin(loginForm: {userName: string, userPassword: string}): void{
 
-    this.login = loginForm;
+    if(loginForm.userName === this.login2.userName && loginForm.userPassword === this.login2.userPassword){
+        this.rout.navigate(['admin/home']);
+    }else{
+      
+      console.log("Error");
+    }
 
-     this.rout.navigate(['admin/home']);
   }
 
 }

@@ -1,5 +1,5 @@
 <div class="mycontainer">
-    <form #loginForm="ngForm" (click)="goToAdmin(loginForm.value)" ngNativeValidate>
+    <form #loginForm="ngForm" (ngSubmit)="goToAdmin(loginForm.value)" ngNativeValidate>
     
         <div class="form-group">
         <label for="name">Login: </label>

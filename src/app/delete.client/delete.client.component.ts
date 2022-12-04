@@ -34,8 +34,10 @@ export class DeleteClientComponent implements OnInit {
   }
 
   public deleteClient(deleteForm: {id: number}): void{
-         this.http.post(`${this.apiUrl}/api/client/delete`, deleteForm).subscribe(
+       if(confirm("Czy na pewno chcesz usunąć klienta?")){
+        this.http.post(`${this.apiUrl}/api/client/delete`, deleteForm).subscribe(
           () => this.rout.navigate(['/admin/home']));
+       }
 
 
         

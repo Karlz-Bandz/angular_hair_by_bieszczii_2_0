@@ -1,13 +1,13 @@
-<div class="container">
+<div class="mycontainer">
     <div class="subcontainer">
 
 
         <form #deleteForm="ngForm" (ngSubmit)="deleteClient(deleteForm.value)" ngNativeValidate>
     
-            <div class="in">
+            <div class="form-group">
             <label for="clientOption">Klienci: </label>
             
-            <select name="id" ngModel>
+            <select class="form-select" name="id" ngModel>
               <option *ngFor="let client of clients" [value]="client.id">{{client.clientSurname}} {{client.clientName}}</option>
             </select>
             </div>
@@ -19,7 +19,7 @@
           
           
           
-            <input class="btn" type="submit" value="Usuń">
+            <input class="btn btn-dark" type="submit" value="Usuń">
           </form>
 
 
