@@ -76,10 +76,13 @@ export class PresentationComponent implements OnInit {
   // let newId = JSON.stringify({id})
     console.log(id);
 
+    
+    if(confirm("Czy napewno chcesz usunąć opis klienta " + this.client?.clientName + "? ")){
     this.http.get(this.apiUrl+'/api/client/delete/description/'+id).subscribe(
       () => console.log("Done"),
       (error: any) => this.rout.navigate(['client/error'])
     );
+    }
 
     // this.presentationService.getClientDescriptions(this.clientId).subscribe(
     //   (response: Client) => this.client = response

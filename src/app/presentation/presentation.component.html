@@ -12,7 +12,7 @@
    <div class="form-group">
       
       <label for="clientOption"><h3>Baza Klientów</h3></label><br>
-          <select class="form-control" id="exampleFormControlSelect1" name="id" required ngModel>
+          <select class="form-control" id="exampleFormControlSelect1" name="id" ngModel required>
               <option *ngFor="let data of clients" [value]="data.id">{{data.clientSurname}} {{data.clientName}}</option>
           </select>
               <button class="btn btn-dark">Pokaz</button>
