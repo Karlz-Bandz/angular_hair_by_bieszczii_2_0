@@ -8,7 +8,7 @@
   <div class="form-group">
   <label for="clientOption"><h3>Klienci:</h3></label>
   
-  <select class="form-select" name="id" ngModel>
+  <select class="form-select" name="id" ngModel required>
     <option value="" selected disabled hidden>-- Wybierz klienta --</option>
     <option *ngFor="let data of clients" [value]="data.id">{{data.clientSurname}} {{data.clientName}}</option>
   </select>

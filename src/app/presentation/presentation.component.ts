@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, shareReplay } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Client } from '../add.description/client';
 import { ClientSelect } from '../add.description/clientSelect';
@@ -73,33 +73,24 @@ export class PresentationComponent implements OnInit {
   }
 
   public deleteDescription(id: number): void{
-  
-    
-
-    
-
-   // let newId = JSON.stringify({id})
+  // let newId = JSON.stringify({id})
     console.log(id);
 
     this.http.get(this.apiUrl+'/api/client/delete/description/'+id).subscribe(
-      () => {
-        let currentUrl = this.rout.url;
-        this.rout.navigateByUrl('/', {skipLocationChange: true}).then(() => {
-            this.rout.navigate([currentUrl]);
-            console.log(currentUrl);
-        });
-      },
+      () => console.log("Done"),
       (error: any) => this.rout.navigate(['client/error'])
     );
 
     // this.presentationService.getClientDescriptions(this.clientId).subscribe(
     //   (response: Client) => this.client = response
     // );
+}
 
-
-
-  
-  }
+// reloadComponent() {
+//   this.rout.routeReuseStrategy.shouldReuseRoute = () => false;
+//   this.rout.onSameUrlNavigation = 'reload';
+//   this.rout.navigate(['/presentation']);
+// }
 
 
 
