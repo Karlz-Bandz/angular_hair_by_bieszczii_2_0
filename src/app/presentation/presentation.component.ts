@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, shareReplay } from 'rxjs';
@@ -76,9 +76,11 @@ export class PresentationComponent implements OnInit {
   // let newId = JSON.stringify({id})
     console.log(id);
 
+
+    const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(localStorage.getItem("1")+":"+localStorage.getItem("2"))});
     
     if(confirm("Czy napewno chcesz usunąć opis klienta " + this.client?.clientName + "? ")){
-    this.http.get(this.apiUrl+'/api/client/delete/description/'+id).subscribe(
+    this.http.get(this.apiUrl+'/api/client/delete/description/'+id, {headers}).subscribe(
       () => console.log("Done"),
       (error: any) => this.rout.navigate(['client/error'])
     );

@@ -1,6 +1,10 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
+
+import { environment } from 'src/environments/environment';
 import { Login } from './login';
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-login',
@@ -10,23 +14,53 @@ import { Login } from './login';
 export class LoginComponent implements OnInit {
 
   login: Login | undefined;
+  errorMessage: string = "Zły login lub hasło";
+  successMessage: string | undefined;
+  invalidLogin: boolean = false;
+  loginSuccess: boolean = false;
 
-  login2: Login = {userName: 'Karol', userPassword: 'karol'};
 
-  constructor(private rout: Router) { }
+  
+
+  private apiUrl = environment.apiBaseUrl;
+
+  
+
+  
+
+  constructor(private rout: Router,
+    private http: HttpClient,
+    private authService: LoginService) { }
 
   ngOnInit(): void {
   }
 
-  public goToAdmin(loginForm: {userName: string, userPassword: string}): void{
 
-    if(loginForm.userName === this.login2.userName && loginForm.userPassword === this.login2.userPassword){
-        this.rout.navigate(['admin/home']);
-    }else{
-      
-      console.log("Error");
+
+
+
+public goToAdmin(loginForm: {userName: string, password: string}): void {
+   this.authService.login(loginForm.userName, loginForm.password).subscribe(
+    () => {
+      this.invalidLogin = false
+      this.loginSuccess = true;
+      this.successMessage = "Logi success";
+      this.rout.navigate(['admin/home']);
+    }, () => {
+      this.invalidLogin = true;
+      this.loginSuccess = false;
     }
+    
+   )
 
-  }
+         
+}
+
+
+
+
+
+
+
 
 }

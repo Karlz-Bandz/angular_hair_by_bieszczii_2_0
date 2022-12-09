@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -16,6 +16,9 @@ export class DeleteClientService {
 
 
   public getClients(): Observable<ClientSelect[]>{
-    return this.http.get<ClientSelect[]>(`${this.apiUrl}/api/client/select`);
+
+    const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(localStorage.getItem("1")+":"+localStorage.getItem("2"))});
+
+    return this.http.get<ClientSelect[]>(`${this.apiUrl}/api/client/select`, {headers});
   }
 }

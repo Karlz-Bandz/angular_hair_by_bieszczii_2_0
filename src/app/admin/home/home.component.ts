@@ -29,6 +29,13 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['delete/client']);
   }
 
+  logOut(): void{
+    localStorage.setItem("1", "0");
+    localStorage.setItem("2", "0");
+
+    this.router.navigate(["login"]);
+  }
+
 
 
 }

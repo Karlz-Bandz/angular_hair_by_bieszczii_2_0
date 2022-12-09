@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
@@ -19,14 +19,18 @@ export class AddClientComponent implements OnInit {
   ngOnInit(): void {
   }
 
+ 
+
 
   public addNewClient(clientForm: {clientName: string, clientSurname: string, phoneNumber: string}): void{
-
+   
     console.log(clientForm);
+
+    const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(localStorage.getItem("1")+":"+localStorage.getItem("2"))});
 
     this.response2 = false;
 
-    this.http.post(this.apiUrl+'/api/client/add', clientForm).subscribe(
+    this.http.post(this.apiUrl+'/api/client/add', clientForm, {headers}).subscribe(
       () => this.rout.navigate(['client/success']),
       (error: any) => this.rout.navigate(['client/error'])
     );

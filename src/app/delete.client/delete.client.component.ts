@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
@@ -34,8 +34,11 @@ export class DeleteClientComponent implements OnInit {
   }
 
   public deleteClient(deleteForm: {id: number}): void{
+
+    const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(localStorage.getItem("1")+":"+localStorage.getItem("2"))});
+
        if(confirm("Czy na pewno chcesz usunąć klienta?")){
-        this.http.post(`${this.apiUrl}/api/client/delete`, deleteForm).subscribe(
+        this.http.post(`${this.apiUrl}/api/client/delete`, deleteForm, {headers}).subscribe(
           () => this.rout.navigate(['/admin/home']));
        }
 

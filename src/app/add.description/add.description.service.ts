@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs';
@@ -17,7 +17,8 @@ export class AddDescriptionService {
 
 
   public getClients(): Observable<ClientSelect[]>{
-    return this.http.get<ClientSelect[]>(`${this.apiUrl}/api/client/select`);
+    const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(localStorage.getItem("1")+":"+localStorage.getItem("2"))});
+    return this.http.get<ClientSelect[]>(`${this.apiUrl}/api/client/select`, {headers});
   }
 
   

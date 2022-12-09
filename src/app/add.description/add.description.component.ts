@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs';
@@ -46,7 +46,9 @@ export class AddDescriptionComponent implements OnInit {
     
     this.response2 = false;
 
-    this.http.post(`${this.apiUrl}/api/client/description`, descriptionForm).subscribe(
+    const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(localStorage.getItem("1")+":"+localStorage.getItem("2"))});
+
+    this.http.post(`${this.apiUrl}/api/client/description`, descriptionForm, {headers}).subscribe(
       () => this.rout.navigate(['admin/home']),
       (error: any) => this.rout.navigate(['client/error'])
       
