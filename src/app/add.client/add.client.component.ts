@@ -26,7 +26,7 @@ export class AddClientComponent implements OnInit {
    
     console.log(clientForm);
 
-    const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(localStorage.getItem("1")+":"+localStorage.getItem("2"))});
+    const headers = new HttpHeaders({Authorization: 'Basic ' + localStorage.getItem("token")});
 
     this.response2 = false;
 

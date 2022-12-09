@@ -17,7 +17,7 @@ export class DeleteClientService {
 
   public getClients(): Observable<ClientSelect[]>{
 
-    const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(localStorage.getItem("1")+":"+localStorage.getItem("2"))});
+    const headers = new HttpHeaders({Authorization: 'Basic ' + localStorage.getItem("token")});
 
     return this.http.get<ClientSelect[]>(`${this.apiUrl}/api/client/select`, {headers});
   }

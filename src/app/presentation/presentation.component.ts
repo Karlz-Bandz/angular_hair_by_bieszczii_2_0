@@ -77,7 +77,7 @@ export class PresentationComponent implements OnInit {
     console.log(id);
 
 
-    const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(localStorage.getItem("1")+":"+localStorage.getItem("2"))});
+    const headers = new HttpHeaders({Authorization: 'Basic ' + localStorage.getItem("token")});
     
     if(confirm("Czy napewno chcesz usunąć opis klienta " + this.client?.clientName + "? ")){
     this.http.get(this.apiUrl+'/api/client/delete/description/'+id, {headers}).subscribe(

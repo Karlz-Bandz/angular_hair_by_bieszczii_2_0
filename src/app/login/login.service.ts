@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { Token } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -34,11 +35,14 @@ private apiUrl = environment.apiBaseUrl;
       return 'Basic '+ window.btoa(login + ":" + password);
   }
 
+  createStorageBasicAuthToken(login: string, password: string){
+    return window.btoa(login + ":" + password);
+}
+
   registerSuccessfulLogin(login: string, password: string){
-        //environment.loginMain = login;
-       // environment.passwordMain = password;
-        localStorage.setItem("1", login);
-        localStorage.setItem("2", password);
+       
+    let token = this.createStorageBasicAuthToken(login, password);
+    localStorage.setItem("token", token);
 
   }
 }

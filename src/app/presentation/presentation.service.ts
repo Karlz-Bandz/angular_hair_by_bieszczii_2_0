@@ -16,14 +16,16 @@ export class PresentationService {
 
   public getClients(): Observable<ClientSelect[]>{
 
-    const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(localStorage.getItem("1")+":"+localStorage.getItem("2"))});
+    const headers = new HttpHeaders({Authorization: 'Basic ' + localStorage.getItem("token")});
 
     return this.http.get<ClientSelect[]>(`${this.apiUrl}/api/client/select`, {headers});
   }
 
   public getClientDescriptions(id: number): Observable<Client>{
 
-    const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(localStorage.getItem("1")+":"+localStorage.getItem("2"))});
+    const headers = new HttpHeaders({Authorization: 'Basic ' + localStorage.getItem("token")});
+
+   
 
     return this.http.get<Client>(`${this.apiUrl}/api/client/show/`+id, {headers});
   }

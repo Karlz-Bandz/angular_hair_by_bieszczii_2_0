@@ -46,7 +46,7 @@ export class AddDescriptionComponent implements OnInit {
     
     this.response2 = false;
 
-    const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(localStorage.getItem("1")+":"+localStorage.getItem("2"))});
+    const headers = new HttpHeaders({Authorization: 'Basic ' + localStorage.getItem("token")});
 
     this.http.post(`${this.apiUrl}/api/client/description`, descriptionForm, {headers}).subscribe(
       () => this.rout.navigate(['admin/home']),

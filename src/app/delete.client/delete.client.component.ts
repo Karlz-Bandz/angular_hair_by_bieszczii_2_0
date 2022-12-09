@@ -35,7 +35,7 @@ export class DeleteClientComponent implements OnInit {
 
   public deleteClient(deleteForm: {id: number}): void{
 
-    const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(localStorage.getItem("1")+":"+localStorage.getItem("2"))});
+    const headers = new HttpHeaders({Authorization: 'Basic ' + localStorage.getItem("token")});
 
        if(confirm("Czy na pewno chcesz usunąć klienta?")){
         this.http.post(`${this.apiUrl}/api/client/delete`, deleteForm, {headers}).subscribe(

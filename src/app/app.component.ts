@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent {
 
      isMenuOpen = false;
 
-
+     constructor(private rout: Router) { }
 
      public toggleMenu(): void {
       //document.getElementById("navbar-script").style.display = "block";
@@ -25,6 +26,16 @@ export class AppComponent {
 
      public hideMenu(): void{
         this.isMenuOpen = false;
+    }
+    public goToLoginPage(): void{
+
+
+      if(localStorage.getItem("token") === "0"){
+        this.rout.navigate(['login']);
+      }else{
+        this.rout.navigate(['admin/home']);
+      }
+      
     }
 
 

@@ -30,8 +30,7 @@ export class HomeComponent implements OnInit {
   }
 
   logOut(): void{
-    localStorage.setItem("1", "0");
-    localStorage.setItem("2", "0");
+  localStorage.setItem("token", "0")
 
     this.router.navigate(["login"]);
   }
