@@ -37,4 +37,8 @@ export class AddClientComponent implements OnInit {
 
   }
 
+  public goBack(): void{
+    this.rout.navigate(['admin/home']);
+  }
+
 }

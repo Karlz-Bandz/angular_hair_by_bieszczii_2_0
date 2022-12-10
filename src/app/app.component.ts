@@ -17,7 +17,7 @@ export class AppComponent {
      constructor(private rout: Router) { }
 
      public toggleMenu(): void {
-      //document.getElementById("navbar-script").style.display = "block";
+      
       this.isMenuOpen = true;
 
     

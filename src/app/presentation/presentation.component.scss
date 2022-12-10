@@ -1,5 +1,8 @@
 @import "bootstrap/scss/bootstrap";
 
+
+
+@media only screen and (min-width: 420px){
 .mycontainer{
      margin-top: 200px;
      text-align: center;
@@ -122,4 +125,135 @@ padding-bottom: 50px;
 
           
      }
+}
+}
+
+@media only screen and (max-width: 420px){
+
+     .mycontainer{
+          margin-top: 86px;
+          text-align: center;
+     //border: solid 1px black;
+     //border-radius: 20px;
+     width: 80%;
+     padding-top: 50px;
+     margin-left: auto;
+     margin-right: auto;
+     
+     margin-bottom: 150px;
+     padding-bottom: 50px;
+     font-size: small;
+     
+          .subcontainer{
+               margin-left: auto;
+               margin-right: auto;
+               font-family: 'Montserrat', sans-serif;
+               font-weight: 800;
+     
+               //margin-right: 60px;
+     .buttons{
+     
+          
+          
+     
+     
+               .btn-dark{
+                    width: 40%;
+                    height: 70px;
+                    margin: 8px;
+                   //text-align: center;
+                   
+               }
+          }
+     
+               label{
+                    margin-bottom: 0px;
+               }
+     
+               .form-group{
+     
+               .form-control{
+                    width: 60%;
+                    height: 50px;
+                    display: inline;
+                    
+                  
+               }
+     
+               .btn-dark{
+                    width: 100px;
+                    height: 45px;
+                    display: inline;
+                    //margin-top: 60px;
+                    margin-bottom: 4px;
+                    margin-left: 10px;
+               }
+          }
+     
+               .presentation{
+                    text-align: center;
+                    
+                    form{
+                         background-color: white;
+                    }
+                    
+     
+                    .number{
+                         width: 45%;
+                         height: 60px;
+                         padding: 10px;
+                         text-align: center;
+                         background-color: white;
+                         margin-left: auto;
+                         margin-right: auto;
+                        // border-radius: 5%;
+                         margin-top: 20px;
+                        // border: solid 0.5px black;
+                        margin-bottom: 30px;
+                         
+                        border-radius: 6px;
+                        //font-size: small;
+                         
+                    }
+                    .description{
+                         width: 78%;
+                         height: auto;
+                         //text-align: center;
+                         background-color: white;
+                         border-radius: 6px;
+                        // border: solid 0.5px black;
+                         margin-top: 20px;
+                         margin-bottom: 20px;
+                         margin-left: auto;
+                         margin-right: auto;
+                         padding-top: 10px;
+                         //padding-bottom: 5px;
+     
+                         .date{
+                           float: left;  
+                           background-color: white;
+                           padding-left: 4px;
+                           margin-bottom: 10px;
+                         }
+                         .hair-text{
+                           background-color: white;
+                           padding: 5px;
+                           margin-left: 100px;
+                           margin-bottom: 25px;
+                           margin-top: 25px;
+                           
+                         }
+                         .btn-dark{
+                              height: 100%;
+                              width: 100%;
+                              bottom: auto;
+                         }
+                    }
+     
+               }
+     
+               
+          }
+     }
+
 }

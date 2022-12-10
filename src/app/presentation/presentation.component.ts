@@ -21,6 +21,7 @@ export class PresentationComponent implements OnInit {
   
 
   showSort: boolean = true;
+  sortButtonVisible: boolean = true;
 
   constructor(private http: HttpClient,
     private presentationService: PresentationService,
@@ -60,16 +61,22 @@ export class PresentationComponent implements OnInit {
     if(this.flagSort === true){
     this.client?.descriptions.reverse();
     this.flagSort = false;
+    this.sortButtonVisible = false;
    }
 
 
-   // this.showSort = false;
+   
   }
   public sortNormal(): void{
     if(this.flagSort === false){
       this.client?.descriptions.reverse();
       this.flagSort = true;
+      this.sortButtonVisible = true;
      }
+  }
+
+  public comeBack(): void{
+    this.rout.navigate(['admin/home']);
   }
 
   public deleteDescription(id: number): void{
