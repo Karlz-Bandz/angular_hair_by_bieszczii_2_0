@@ -80,6 +80,11 @@ padding-bottom: 50px;
                     margin-top: 20px;
                     margin-bottom: 30px;
                     border-radius: 6px;
+
+                    .subnumber{
+                         margin-top: 3px;
+                         background-color: white;
+                    }
                     
                }
                .description{
@@ -125,7 +130,7 @@ padding-bottom: 50px;
 @media only screen and (max-width: 420px){
 
      .mycontainer{
-          margin-top: 75px;
+          margin-top: 50px;
           text-align: center;
      
      width: 80%;
@@ -204,6 +209,11 @@ padding-bottom: 50px;
                          margin-top: 20px;
                          margin-bottom: 30px;
                          border-radius: 6px;
+
+                         .subnumber{
+                              margin-top: 6px;
+                              background-color: white;
+                         }
                         
                          
                     }

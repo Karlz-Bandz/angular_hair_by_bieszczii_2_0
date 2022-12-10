@@ -9,6 +9,10 @@
     padding-bottom: 150px;
     font-family: 'Montserrat', sans-serif;
 
+    h2{
+        font-weight: 800;
+    }
+
     .form-control{
         width: 400px;
         height: 60px;
@@ -41,11 +45,13 @@
 @media only screen and (max-width: 420px){
 
     .mycontainer{
-        margin-top: 70px;
+        margin-top: 85px;
         text-align: center;
         padding-bottom: 40px;
         font-family: 'Montserrat', sans-serif;
-            
+            h2{
+                font-weight: 800;
+            }
     
         .form-control{
             width: 300px;
@@ -61,7 +67,7 @@
         label{
             margin-top: 10px;
             margin-bottom: 10px;
-            font-weight: 600;
+            font-weight: 800;
         }
         .btn-dark{
             margin-top: 10px;
