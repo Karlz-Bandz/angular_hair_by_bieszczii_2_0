@@ -8,6 +8,7 @@
             <label for="clientOption">Klienci: </label>
             
             <select class="form-select" name="id" ngModel>
+              <option value="" selected disabled hidden>-- Wybierz klienta --</option>
               <option *ngFor="let client of clients" [value]="client.id">{{client.clientSurname}} {{client.clientName}}</option>
             </select>
             </div>
@@ -21,6 +22,8 @@
           
             <input class="btn btn-dark" type="submit" value="Usuń">
           </form>
+
+          <input class="btn btn-dark2" type="button" (click)="goBack()" value="Powrót">
 
 
 

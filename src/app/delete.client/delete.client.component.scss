@@ -1,5 +1,101 @@
 @import "bootstrap/scss/bootstrap";
 
+
+
+
+
+@media only screen and (min-width: 420px){
 .mycontainer{
-    margin-top: 300px;
+
+margin-top: 260px;
+text-align: center;
+font-family: 'Montserrat', sans-serif;
+
+    .subcontainer{
+
+
+
+        .form-group{
+
+            font-weight: 800;
+
+
+            .form-select{
+
+                font-weight: 600;
+                width: 48%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
+
+
+            }
+
+            
+           
+        }
+
+        .btn-dark{
+            width: 48%;
+            margin: 8px;
+         }
+
+        .btn-dark2{
+            margin-top: 10px;
+        
+            font-weight: 600;
+        }
+    }
+     
+}
+}
+
+@media only screen and (max-width: 420px){
+
+    .mycontainer{
+
+        margin-top: 170px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        
+            .subcontainer{
+        
+        
+        
+                .form-group{
+        
+                    font-weight: 800;
+        
+        
+                    .form-select{
+        
+                        font-weight: 600;
+                        width: 80%;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+        
+        
+                    }
+        
+                    
+                   
+                }
+        
+                .btn-dark{
+                    width: 80%;
+                    margin: 8px;
+                 }
+        
+                .btn-dark2{
+                    margin-top: 10px;
+                
+                    font-weight: 600;
+                }
+            }
+             
+        }
+
 }

@@ -36,13 +36,28 @@ export class DeleteClientComponent implements OnInit {
     );
   }
 
+  public goBack(): void{
+    this.rout.navigate(['admin/home']);
+  }
+
   public deleteClient(deleteForm: {id: number}): void{
 
     const headers = new HttpHeaders({Authorization: 'Basic ' + localStorage.getItem("token")});
 
        if(confirm("Czy na pewno chcesz usunąć klienta?")){
         this.http.post(`${this.apiUrl}/api/client/delete`, deleteForm, {headers}).subscribe(
-          () => this.rout.navigate(['/admin/home']));
+          () => {
+            
+            this.rout.navigate(['/admin/home']);
+            alert("Klient usunięty");
+        
+        
+        },
+          (error: any) => this.rout.navigate(['client/error'])
+          
+          
+          );
+          
        }
 
 

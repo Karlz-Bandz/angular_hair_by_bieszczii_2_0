@@ -4,12 +4,14 @@
 @media only screen and (min-width: 420px){
 .mycontainer{
      margin-top: 170px;
+     font-family: 'Montserrat', sans-serif;
    
     
 
     .subcontainer{
         text-align: center;
         padding-bottom: 150px;
+        
 
       
         .form-select{
@@ -19,21 +21,25 @@
             margin-right: auto;
         margin-top: 10px;
         margin-bottom: 3.5px;
+        font-weight: 600;
         }
         h3{
             margin-top: 22px;
+            font-weight: 800;
         }
         .form-control{
             margin-top: 10px;
             display: block;
             margin-left: auto;
             margin-right: auto;
+            font-weight: 600;
         }
 
         textarea{
             
             width: 600px;
             height: 250px;
+            font-weight: 600;
         }
 
         .btn-dark{
@@ -42,6 +48,11 @@
             
 
         }
+        .btn-dark2{
+            margin-top: 20px;
+            
+            font-weight: 600;
+           }
         
     }
 }
@@ -49,6 +60,7 @@
 @media only screen and (max-width: 420px){
     .mycontainer{
         margin-top: 50px;
+        font-family: 'Montserrat', sans-serif;
         
       
        
@@ -65,21 +77,25 @@
                margin-right: auto;
            margin-top: 10px;
            margin-bottom: 3.5px;
+           font-weight: 600;
            }
            h3{
                margin-top: 22px;
+               font-weight: 800;
            }
            .form-control{
                margin-top: 10px;
                display: block;
                margin-left: auto;
                margin-right: auto;
+               font-weight: 600;
            }
    
            textarea{
               
                width: 80%;
                height: 280px;
+               font-weight: 600;
            }
    
            .btn-dark{
@@ -90,7 +106,7 @@
            }
            .btn-dark2{
             margin-top: 20px;
-            font-family: 'Montserrat', sans-serif;
+            
             font-weight: 600;
            }
            
