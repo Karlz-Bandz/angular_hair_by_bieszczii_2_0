@@ -9,6 +9,7 @@ import { Description } from './description';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ClientSelect } from './clientSelect';
 import { Router } from '@angular/router';
+import { GlobService } from '../globalfunctions';
 
 @Component({
   selector: 'app-add.description',
@@ -17,30 +18,28 @@ import { Router } from '@angular/router';
 })
 export class AddDescriptionComponent implements OnInit {
 
+  private apiUrl = environment.apiBaseUrl;
+ 
   clients: ClientSelect[] = [];
-  //client: Client | undefined;
 
   response2: boolean = true;
  
-  //descriptionText: string | undefined;
-
   selected: any;
-
- 
- private apiUrl = environment.apiBaseUrl;
-  
 
   constructor(private addDescriptionService: AddDescriptionService,
    private http: HttpClient,
-   private rout: Router) { }
+   private rout: Router,
+   private glob: GlobService) { }
 
-  ngOnInit(): void {
+  
+   ngOnInit(): void {
     this.getClients();
+    this.glob.secureFront();
+
+  
   }
 
- 
-
-  hello(descriptionForm: {id: number, descrption: string}): void{
+    hello(descriptionForm: {id: number, descrption: string}): void{
    
     console.log(descriptionForm);
     
@@ -55,6 +54,10 @@ export class AddDescriptionComponent implements OnInit {
     );
 
     
+  }
+
+  public goBack(): void{
+    this.rout.navigate(['admin/home']);
   }
 
  

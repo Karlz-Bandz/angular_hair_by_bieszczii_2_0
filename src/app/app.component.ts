@@ -30,7 +30,7 @@ export class AppComponent {
     public goToLoginPage(): void{
 
 
-      if(localStorage.getItem("token") === "0"){
+      if(localStorage.getItem("token") === null || localStorage.getItem("token") === "0"){
         this.rout.navigate(['login']);
       }else{
         this.rout.navigate(['admin/home']);

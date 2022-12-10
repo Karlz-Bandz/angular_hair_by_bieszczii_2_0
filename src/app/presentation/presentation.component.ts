@@ -6,6 +6,7 @@ import { environment } from 'src/environments/environment';
 import { Client } from '../add.description/client';
 import { ClientSelect } from '../add.description/clientSelect';
 import { Description } from '../add.description/description';
+import { GlobService } from '../globalfunctions';
 import { PresentationService } from './presentation.service';
 
 @Component({
@@ -25,7 +26,8 @@ export class PresentationComponent implements OnInit {
 
   constructor(private http: HttpClient,
     private presentationService: PresentationService,
-    private rout: Router) { }
+    private rout: Router,
+    private glob: GlobService) { }
 
   private apiUrl = environment.apiBaseUrl;
 
@@ -33,6 +35,7 @@ export class PresentationComponent implements OnInit {
 
   ngOnInit(): void {
     this.getSelectClients();
+    this.glob.secureFront();
     
   }
 
@@ -45,6 +48,7 @@ export class PresentationComponent implements OnInit {
   public getClientDescriptions(presentationForm:{id: number}): void{
     
     this.flagSort = true;
+    this.sortButtonVisible = true;
     this.presentationService.getClientDescriptions(presentationForm.id).subscribe(
       (response: Client) => this.client = response
     );

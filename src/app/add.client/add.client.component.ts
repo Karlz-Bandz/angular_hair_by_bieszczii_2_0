@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { GlobService } from '../globalfunctions';
 
 @Component({
   selector: 'app-add.client',
@@ -11,12 +12,14 @@ import { environment } from 'src/environments/environment';
 export class AddClientComponent implements OnInit {
 
   constructor(private http: HttpClient,
-    private rout: Router) { }
+    private rout: Router,
+    private glob: GlobService) { }
 
   apiUrl = environment.apiBaseUrl;
   response2: boolean = true;
 
   ngOnInit(): void {
+    this.glob.secureFront();
   }
 
  

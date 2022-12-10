@@ -4,9 +4,10 @@
 
 @media only screen and (min-width: 420px){
 .mycontainer{
-    margin-top: 200px;
+    margin-top: 180px;
     text-align: center;
     padding-bottom: 150px;
+    font-family: 'Montserrat', sans-serif;
 
     .form-control{
         width: 400px;
@@ -15,11 +16,14 @@
         margin-right: auto;
         margin-top: 5px;
         margin-bottom: 11px;
+        font-weight: 500;
 
         
     }
     label{
         margin-top: 10px;
+        font-weight: 600;
+        margin-bottom: 10px;
     }
     .btn-dark{
         margin-top: 10px;
@@ -27,33 +31,48 @@
         width: 400px;
         height: 60px;
     }
+    .btn-dark2{
+        margin-top: 20px;
+        font-weight: 600;
+        
+       }
 }
 }
 @media only screen and (max-width: 420px){
 
     .mycontainer{
-        margin-top: 140px;
+        margin-top: 70px;
         text-align: center;
-        padding-bottom: 150px;
+        padding-bottom: 40px;
+        font-family: 'Montserrat', sans-serif;
+            
     
         .form-control{
             width: 300px;
             height: 60px;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 8px;
+            margin-top: 2px;
             margin-bottom: 15px;
+            font-weight: 500;
     
            
         }
         label{
             margin-top: 10px;
+            margin-bottom: 10px;
+            font-weight: 600;
         }
         .btn-dark{
-            margin-top: 50px;
+            margin-top: 10px;
             width: 300px;
             height: 60px;
         }
+        .btn-dark2{
+            margin-top: 20px;
+            font-weight: 600;
+            
+           }
     }
 
 

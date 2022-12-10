@@ -4,10 +4,9 @@
 
 @media only screen and (min-width: 420px){
 .mycontainer{
-     margin-top: 200px;
+     margin-top: 150px;
      text-align: center;
-//border: solid 1px black;
-//border-radius: 20px;
+
 width: 80%;
 padding-top: 50px;
 margin-left: auto;
@@ -22,7 +21,6 @@ padding-bottom: 50px;
           font-family: 'Montserrat', sans-serif;
           font-weight: 800;
 
-          //margin-right: 60px;
 .buttons{
 
      
@@ -33,7 +31,7 @@ padding-bottom: 50px;
                width: 300px;
                height: 40px;
                margin: 8px;
-              //text-align: center;
+             
               
           }
      }
@@ -44,7 +42,9 @@ padding-bottom: 50px;
 
           .form-group{
 
-          .form-control{
+               margin-top: 33px;
+
+          .form-select{
                width: 400px;
                height: 50px;
                display: inline;
@@ -56,7 +56,6 @@ padding-bottom: 50px;
                width: 100px;
                height: 45px;
                display: inline;
-               //margin-top: 60px;
                margin-bottom: 4px;
                margin-left: 10px;
           }
@@ -78,27 +77,22 @@ padding-bottom: 50px;
                     background-color: white;
                     margin-left: auto;
                     margin-right: auto;
-                   // border-radius: 5%;
                     margin-top: 20px;
-                   // border: solid 0.5px black;
-                   margin-bottom: 30px;
-                    
-                   border-radius: 6px;
+                    margin-bottom: 30px;
+                    border-radius: 6px;
                     
                }
                .description{
                     width: 78%;
                     height: auto;
-                    //text-align: center;
                     background-color: white;
                     border-radius: 6px;
-                   // border: solid 0.5px black;
                     margin-top: 20px;
                     margin-bottom: 20px;
                     margin-left: auto;
                     margin-right: auto;
                     padding-top: 10px;
-                    //padding-bottom: 5px;
+                   
 
                     .date{
                       float: left;  
@@ -131,10 +125,9 @@ padding-bottom: 50px;
 @media only screen and (max-width: 420px){
 
      .mycontainer{
-          margin-top: 86px;
+          margin-top: 75px;
           text-align: center;
-     //border: solid 1px black;
-     //border-radius: 20px;
+     
      width: 80%;
      padding-top: 50px;
      margin-left: auto;
@@ -150,7 +143,7 @@ padding-bottom: 50px;
                font-family: 'Montserrat', sans-serif;
                font-weight: 800;
      
-               //margin-right: 60px;
+               
      .buttons{
      
           
@@ -160,8 +153,8 @@ padding-bottom: 50px;
                .btn-dark{
                     width: 40%;
                     height: 70px;
-                    margin: 8px;
-                   //text-align: center;
+                    margin: 10px;
+                    margin-bottom: 30px;
                    
                }
           }
@@ -172,8 +165,11 @@ padding-bottom: 50px;
      
                .form-group{
      
-               .form-control{
-                    width: 60%;
+               .form-select{
+                    
+
+                    margin: 10px;
+                    width: 90%;
                     height: 50px;
                     display: inline;
                     
@@ -181,20 +177,19 @@ padding-bottom: 50px;
                }
      
                .btn-dark{
-                    width: 100px;
-                    height: 45px;
-                    display: inline;
-                    //margin-top: 60px;
-                    margin-bottom: 4px;
-                    margin-left: 10px;
+                 
+                    margin-top: 18px;
+                    width: 45%;
                }
           }
      
                .presentation{
                     text-align: center;
                     
+                    
                     form{
                          background-color: white;
+                         
                     }
                     
      
@@ -206,28 +201,23 @@ padding-bottom: 50px;
                          background-color: white;
                          margin-left: auto;
                          margin-right: auto;
-                        // border-radius: 5%;
                          margin-top: 20px;
-                        // border: solid 0.5px black;
-                        margin-bottom: 30px;
-                         
-                        border-radius: 6px;
-                        //font-size: small;
+                         margin-bottom: 30px;
+                         border-radius: 6px;
+                        
                          
                     }
                     .description{
-                         width: 78%;
+                         width: 90%;
                          height: auto;
-                         //text-align: center;
                          background-color: white;
                          border-radius: 6px;
-                        // border: solid 0.5px black;
                          margin-top: 20px;
                          margin-bottom: 20px;
                          margin-left: auto;
                          margin-right: auto;
                          padding-top: 10px;
-                         //padding-bottom: 5px;
+                        
      
                          .date{
                            float: left;  
@@ -238,9 +228,10 @@ padding-bottom: 50px;
                          .hair-text{
                            background-color: white;
                            padding: 5px;
-                           margin-left: 100px;
-                           margin-bottom: 25px;
-                           margin-top: 25px;
+                           margin-left: 10px;
+                           margin-right: 10px;
+                           margin-bottom: 10px;
+                           margin-top: 30px;
                            
                          }
                          .btn-dark{
