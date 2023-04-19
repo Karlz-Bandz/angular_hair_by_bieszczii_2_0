@@ -3,7 +3,7 @@
 --------------------------------
 
 This is a front-end project which has been written by myself for a hairdresser company.
-Below is a link to this website:
+Below is a link to the website:
 
 https://hairbybieszczii.pl
 
