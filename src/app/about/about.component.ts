@@ -10,9 +10,7 @@ import { ImageService } from './image.service';
 })
 export class AboutComponent implements OnInit {
 
- 
-
-  constructor(private imageService: ImageService,
+   constructor(private imageService: ImageService,
               private rout: Router) { }
 
   imageProfil: Image | undefined; 
@@ -29,7 +27,4 @@ export class AboutComponent implements OnInit {
         () => console.log("Done!")
        );
   }
-
-
-
 }
