@@ -23,7 +23,7 @@
               <button class="btn btn-dark">Pokaż</button>
             
     </div>
-
+{{user_id}}
 
     <div class="presentation">
   
@@ -36,7 +36,11 @@
         <div class="date">{{description.workDate}}</div> 
         <div class="hair-text">{{description.description}}</div>
         <!-- <div class="deletebutton"> -->
-        <button class="btn btn-dark" (click)="deleteDescription(description.id); getClientDescriptions(presentationForm.value)">usuń</button>
+          
+        
+          <button class="btn btn-dark" (click)="deleteDescription(description.id, user_id); getClientDescriptions(presentationForm.value)">usuń</button>
+        
+        
         <!-- </div> -->
       <!-- </form> -->
         

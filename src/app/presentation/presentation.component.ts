@@ -8,6 +8,7 @@ import { ClientSelect } from '../add.description/clientSelect';
 import { Description } from '../add.description/description';
 import { GlobService } from '../globalfunctions';
 import { PresentationService } from './presentation.service';
+import { DeleteDescriptionDto } from './DeleteDescriptionDto';
 
 @Component({
   selector: 'app-presentation',
@@ -18,6 +19,9 @@ export class PresentationComponent implements OnInit {
 
   clients: ClientSelect[] = [];
   client: Client | undefined;
+  user_id: number = 0;
+  private deleteDescriptionDto: DeleteDescriptionDto | undefined;
+  
 
   
 
@@ -49,6 +53,7 @@ export class PresentationComponent implements OnInit {
     
     this.flagSort = true;
     this.sortButtonVisible = true;
+    this.user_id = presentationForm.id;
     this.presentationService.getClientDescriptions(presentationForm.id).subscribe(
       (response: Client) => this.client = response
     );
@@ -83,15 +88,31 @@ export class PresentationComponent implements OnInit {
     this.rout.navigate(['admin/home']);
   }
 
-  public deleteDescription(id: number): void{
+  public deleteDescription(descriptionIdArg: number, userIdArg: number): void{
   // let newId = JSON.stringify({id})
-    console.log(id);
+    console.log(descriptionIdArg);
+    console.log(userIdArg);
+
+    var userId: number = Number(userIdArg);
+    var descriptionId: number = Number(descriptionIdArg);
+
+    var data = {
+                  "descriptionId": descriptionId, 
+                  "userId": userId
+               };
+
+    console.log(data);
+
+    
+
+    
+    
 
 
     const headers = new HttpHeaders({Authorization: 'Basic ' + localStorage.getItem("token")});
     
     if(confirm("Czy napewno chcesz usunąć opis klienta " + this.client?.clientName + "? ")){
-    this.http.get(this.apiUrl+'/api/client/delete/description/'+id, {headers}).subscribe(
+    this.http.post(this.apiUrl+'/api/client/delete/description', data, {headers}).subscribe(
       () => console.log("Done"),
       (error: any) => this.rout.navigate(['client/error'])
     );
