@@ -11,7 +11,7 @@ import { GlobService } from '../globalfunctions';
 })
 export class AddClientComponent implements OnInit {
 
-  constructor(private http: HttpClient,
+    constructor(private http: HttpClient,
     private rout: Router,
     private glob: GlobService) { }
 
@@ -22,10 +22,7 @@ export class AddClientComponent implements OnInit {
     this.glob.secureFront();
   }
 
- 
-
-
-  public addNewClient(clientForm: {clientName: string, clientSurname: string, phoneNumber: string}): void{
+   public addNewClient(clientForm: {clientName: string, clientSurname: string, phoneNumber: string}): void{
    
     console.log(clientForm);
 
