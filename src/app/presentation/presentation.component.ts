@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit,  ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, shareReplay } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -9,6 +9,7 @@ import { Description } from '../add.description/description';
 import { GlobService } from '../globalfunctions';
 import { PresentationService } from './presentation.service';
 import { DeleteDescriptionDto } from './DeleteDescriptionDto';
+
 
 @Component({
   selector: 'app-presentation',
@@ -21,6 +22,8 @@ export class PresentationComponent implements OnInit {
   client: Client | undefined;
   user_id: number = 0;
   private deleteDescriptionDto: DeleteDescriptionDto | undefined;
+
+  @ViewChild('descriptionInput') descriptionInput!: ElementRef;
   
 
   
@@ -47,6 +50,26 @@ export class PresentationComponent implements OnInit {
     this.presentationService.getClients().subscribe(
       (response: ClientSelect[]) => this.clients = response 
     );
+  }
+
+  async updateText(userId: number, descriptionId: number){
+    
+
+    var description = this.descriptionInput.nativeElement.value;
+    var data = {
+      "userId": userId,
+      "descriptionId": descriptionId, 
+      "description": description
+   };
+
+   console.log(data);
+
+   const headers = new HttpHeaders({Authorization: 'Basic ' + localStorage.getItem("token")});
+
+   this.http.put(`${this.apiUrl}/api/client/change`, data, {headers}).subscribe(
+    () => console.log("Done")
+   );
+
   }
 
   public getClientDescriptions(presentationForm:{id: number}): void{
