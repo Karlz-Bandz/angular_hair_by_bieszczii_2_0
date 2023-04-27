@@ -13,9 +13,7 @@
    <div class="form-group">
       
       <label for="clientOption"><h3>Baza Klientów</h3></label><br>
-          <!-- <select class="form-control" id="exampleFormControlSelect1" name="id" ngModel required>
-              <option *ngFor="let data of clients" [value]="data.id">{{data.clientSurname}} {{data.clientName}}</option>
-          </select> -->
+         
           <select class="form-select" name="id" ngModel required>
             <option value="" selected disabled hidden>-- Wybierz klienta --</option>
             <option *ngFor="let data of clients" [value]="data.id">{{data.clientSurname}} {{data.clientName}}</option>
@@ -23,38 +21,26 @@
               <button class="btn btn-dark">Pokaż</button>
             
     </div>
-{{user_id}}
 
     <div class="presentation">
   
       <div class="number">
        Numer telefonu:<br>
-       <!-- <a href="tel: +48-'+c'"> Do zrobienia--><div class="subnumber">{{client?.phoneNumber}}</div>
+       <!-- <a href="tel: +48-'+c'"> TODO--><div class="subnumber">{{client?.phoneNumber}}</div>
       </div>
       <div class="description"   *ngFor="let description of client?.descriptions" >
-        <!-- <form #presentationForm="ngForm"  > -->
-        <div class="date">{{description.workDate}}</div> 
-        <div class="hair-text">{{description.description}}</div>
-        <!-- <div class="deletebutton"> -->
+        
+      <div class="date">{{description.workDate}}</div> 
+      <div class="hair-text">{{description.description}}</div>
+       
+          <input  [value]="description.description" #descriptionInput> 
+          <button (click)="updateText(user_id, description.id, descriptionInput); getClientDescriptions(presentationForm.value)">Update</button>
           
         
           <button class="btn btn-dark" (click)="deleteDescription(description.id, user_id); getClientDescriptions(presentationForm.value)">usuń</button>
         
-        
-        <!-- </div> -->
-      <!-- </form> -->
-        
       </div>
       </div>
-
-
-
-
-
 </form>
-
-  
-
 </div>
 </div>
-

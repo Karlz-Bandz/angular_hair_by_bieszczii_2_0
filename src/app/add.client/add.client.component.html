@@ -2,8 +2,7 @@
     <div *ngIf="response2" class="subcontainer">
         <h2>Dodaj klienta</h2> 
 
-
-  <form #clientForm="ngForm"  (ngSubmit)="addNewClient(clientForm.value)" ngNativeValidate>
+ <form #clientForm="ngForm"  (ngSubmit)="addNewClient(clientForm.value)" ngNativeValidate>
     
         <div class="form-group">
         <label for="name">Imię: </label>
@@ -19,21 +18,12 @@
         <label for="phone">Telefon: </label>
         <input class="form-control" type="text" name="phoneNumber" placeholder="Wpisz telefon" ngModel required>
         </div>
-
-        
-         <input class="btn btn-dark" type="submit" value="Dodaj">
-
-        
-        
-        
-        
-        
-    
-    
-    
-  </form>
-  <input class="btn btn-dark2" (click)="goBack()" type="button" value="Powrót">
-    </div>
+        <input class="btn btn-dark" type="submit" value="Dodaj">
+ </form>
+  
+ <input class="btn btn-dark2" (click)="goBack()" type="button" value="Powrót">
+ 
+</div>
     <div *ngIf="!response2" style="margin-top: 350px;"class="text-center">
       <div class="spinner-border" role="status">
         <span class="sr-only"></span>

@@ -1,27 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
-
-
-*{
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Josefin+Sans:wght@200&display=swap');
+// *{
+    
+//     // box-sizing: content-box;
+    
+//     // scroll-margin-bottom: 400px;
+// }
+body{
+    background-color: #F4D4C8;
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
-    background-color: #F4D4C8;
-    scroll-margin-bottom: 400px;
 }
 
-
-
-
-
-
-
-
-
 @media only screen and (min-width: 420px){
-
-
 
 .main{
 
@@ -34,8 +27,9 @@
     width: 100%;
     left: 50%;
     transform: translate(-50%, 0);
-    height: 90px;
+    height: 120px;
     opacity: 0.8;
+    background-color: #F4D4C8;
     
     
 .title{
@@ -43,6 +37,7 @@
     text-align: center;
     font-size: 3em;
     cursor: pointer;
+    
 
     .mobile-menu{
        display: none;
@@ -58,23 +53,22 @@
 
 .navbar{
   
-   margin: 0em;
    text-align: center;
    z-index: 99;
-   height: 45px;
-   margin-top: 10px;
+   height: 53px;
+   margin-top: 25px;
+   background-color: #F4D4C8;
 
    .exit-icon{
     display: none;
    }
    
     li, a{
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 800;
-        font-size: 25px;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 600;
+        font-size: 36px;
         color:black;
         text-decoration: none;
-        
     }
 
 }
@@ -100,7 +94,7 @@
 
 
 hr{
-    width: 50%;
+    width: 60%;
     border: none;
     height: 0.1px;
     margin: auto;
@@ -116,16 +110,10 @@ hr{
     position:fixed;
     width:100%;
     bottom: 0;
-    //opacity: 70%;
     height: 40px;
     z-index: 99;
 
-    
-    
-    
-    
-    
-       .image-footer{
+    .image-footer{
            width: 28px;
            height: auto;
            border-radius: 15%;
@@ -135,9 +123,7 @@ hr{
            
        }
        
-    
-    
-        .copy{
+       .copy{
           float: right;  
           padding-top: 24px;
           padding-right: 5px;
@@ -154,9 +140,6 @@ hr{
 
 @media only screen and (max-width: 420px) and (min-width:281px) {
 
-
-
-
     .main{
         
         display: block;
@@ -170,9 +153,6 @@ hr{
         transform: translate(-50%, 0);
         height: 66px;
         opacity: 0.96;
-
-       
-
 
         hr{
             display: none;
@@ -229,11 +209,6 @@ hr{
 
         }
       
-       
-      
-
-      
-
         .title{
             font-family: 'Aboreto', cursive;
             
@@ -253,8 +228,6 @@ hr{
                
             }
             
-            
-            
             a{
                 text-decoration: none;
                 color: black;
@@ -263,8 +236,6 @@ hr{
             
             }
             
-           
-        
         }
         
     }
@@ -280,9 +251,6 @@ hr{
         opacity: 0.8;
         z-index: 1;
         
-        
-        
-        
            .image-footer{
                width: 29px;
                height: auto;
@@ -291,8 +259,6 @@ hr{
                
            }
            
-        
-        
             .copy{
               float: right;  
               padding-top: 24px;
@@ -464,11 +430,4 @@ hr{
             }
         
     }
-
-
-
-
 }
-
-
-
