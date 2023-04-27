@@ -52,14 +52,14 @@ export class PresentationComponent implements OnInit {
     );
   }
 
-  async updateText(userId: number, descriptionId: number){
+  updateText(userId: number, descriptionId: number, description: any): void{
     
-
-    var description = this.descriptionInput.nativeElement.value;
+    var descriptionString: string = description.value;
+    
     var data = {
       "userId": userId,
       "descriptionId": descriptionId, 
-      "description": description
+      "description": descriptionString
    };
 
    console.log(data);
@@ -69,7 +69,6 @@ export class PresentationComponent implements OnInit {
    this.http.put(`${this.apiUrl}/api/client/change`, data, {headers}).subscribe(
     () => console.log("Done")
    );
-
   }
 
   public getClientDescriptions(presentationForm:{id: number}): void{
