@@ -32,26 +32,32 @@
 @media only screen and (max-width: 420px){
 
   .container{
-      margin-top: 8em;
-      text-align: center;
+      margin-top: 6em;
+      
       padding-bottom: 150px;
+      text-align: center;
     
      .profil{
-        width: 200px;
+        width: 260px;
         height: auto;
         border-radius: 50%;
+        
+        
+            
+            -webkit-box-shadow: 0px 0px 31px -14px rgba(0, 0, 0, 1);
+-moz-box-shadow: 0px 0px 31px -14px rgba(0, 0, 0, 1);
+box-shadow: 0px 0px 31px -14px rgba(0, 0, 0, 1);
       }
       
       .description{
       margin-top: 30px;
-      margin-right: 12%;
-      margin-left: 12%;
-    
-      a{
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
+      margin-right: 5%;
+      margin-left: 5%;
+      font-family: 'Sen', sans-serif;
+      font-size: auto;
+      text-align: left;
       
-    }
+    
   }
 }
 }
