@@ -1,59 +1,6 @@
 
 
-@media only screen and (min-width: 420px){
-
-// .container{
-//     // margin: 3em;
-//     // text-align: center;
-//    // padding: 2em;
-//     margin-top: 185px;
-//     padding-bottom: 150px;
-//     display: flex;
-//     margin-left: 85px;
-    
-
-    
-   
-//     .main-img{
-//     //    width: 750px;
-//        max-width: 80%;
-       
-//         height: auto;
-//        border: solid 5px white;
-//        // border-bottom:solid 150px white;
-//         border-radius: 2%;
-        
-        
-//     }
-//     .message{
-        
-//         font-family: 'Sen', sans-serif;
-//         // margin-left: 20%;
-//         // margin-right: 20%;
-       
-//         width: 100%;
-//         margin-top: 40px;
-        
-       
-        
-        
-        
-//         h2{
-//             //margin: 1.5em;
-//             text-transform: uppercase;
-//             text-align: center;
-//         }
-//         .welcome-text{
-
-//             font-size: 20px;
-//             text-align: left;
-//             width: 100%;
-//             margin-left: 3px;
-//         //margin: 2em;
-       
-//         }
-//     }
-// }
+@media only screen and (min-width: 1025px){
 .container{
     margin-top: 205px;
     margin-bottom: 150px;
@@ -87,6 +34,52 @@ box-shadow: 0px 0px 31px -14px rgba(0, 0, 0, 1);
     }
 }
 }
+@media only screen and (max-width: 1024px) and (min-width: 421px){
+    .container{
+      
+        text-align: center;
+      
+        display: block;
+
+        padding-bottom: 130px;
+
+        margin-top: 230px;
+       
+       
+
+       .main-img{
+            width: 540px;
+            height: auto;
+            border: solid 10px white;
+            border-bottom: solid 50px white;
+            border-radius: 2%;
+            -webkit-box-shadow: 0px 0px 31px -14px rgba(0, 0, 0, 1);
+            -moz-box-shadow: 0px 0px 31px -14px rgba(0, 0, 0, 1);
+            box-shadow: 0px 0px 31px -14px rgba(0, 0, 0, 1);
+        }
+        .message{
+            
+            font-family: 'Sen', sans-serif;
+            margin: 2em;
+            h2{
+                text-transform: uppercase; 
+                
+            }
+            .welcome-text{
+                font-size: 20px;
+                margin-left: 8%;
+                margin-right: 8%;
+             }
+        }
+    }
+
+
+
+
+
+
+
+}
 
 @media only screen and (max-width: 420px) and (min-width: 281px){
 
@@ -110,17 +103,12 @@ box-shadow: 0px 0px 31px -14px rgba(0, 0, 0, 1);
             border-bottom: solid 50px white;
             border-radius: 2%;
             -webkit-box-shadow: 0px 0px 31px -14px rgba(0, 0, 0, 1);
--moz-box-shadow: 0px 0px 31px -14px rgba(0, 0, 0, 1);
-box-shadow: 0px 0px 31px -14px rgba(0, 0, 0, 1);
-            
-            
-          
+            -moz-box-shadow: 0px 0px 31px -14px rgba(0, 0, 0, 1);
+            box-shadow: 0px 0px 31px -14px rgba(0, 0, 0, 1);
         }
         .message{
             
             font-family: 'Sen', sans-serif;
-            
-            // font-weight: 60;
             margin: 2em;
             h2{
                 text-transform: uppercase; 
