@@ -2,11 +2,30 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Image } from './image';
 import { ImageService } from './image.service';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  styleUrls: ['./about.component.scss'],
+  animations: [
+    trigger('popState', [
+      state('show', style({
+        opacity: 1
+      })),
+      state('hide', style({
+        opacity: 0
+      })),
+      transition('show => hide', animate('600ms ease-out')),
+      transition('hide => show', animate('1000ms ease-in'))
+    ])
+  ]
 })
 export class AboutComponent implements OnInit {
 
@@ -14,9 +33,16 @@ export class AboutComponent implements OnInit {
               private rout: Router) { }
 
   imageProfil: Image | undefined; 
+  show = false;
 
   ngOnInit(): void {
     this.getImageProfil();
+    setTimeout(() => {
+      this.show = true;
+    }, 100);
+  }
+  get stateOfImg(){
+    return this.show ? 'show' : 'hide';
   }
 
   public getImageProfil(): void{
