@@ -1,6 +1,6 @@
 
 
-<div class="container">
+<div class="container" [@popState]="stateOfImg">
 <div *ngFor="let images of photos" style="margin-top: 10px;">
     <div class="record">
         <img src="{{images.url}}">
