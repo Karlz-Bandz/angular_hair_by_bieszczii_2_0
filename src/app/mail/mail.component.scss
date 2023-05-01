@@ -67,13 +67,24 @@
                 margin-top: 0px;
                 float: left;
             }
+            
             .mybtn{
                 cursor: pointer;
                 width: 90px;
                 height: 75px;
-            
-           float: right;
-               }
+                float: right;
+                background-color: black;
+                color: white;
+                border: none;
+                font-family: 'Sen', sans-serif;
+                border-radius: 10%
+            }
+            .mybtn:hover{
+                -webkit-box-shadow: 0px 0px 18px -7px rgba(0, 0, 0, 1);
+                -moz-box-shadow: 0px 0px 18px -7px rgba(0, 0, 0, 1);
+                box-shadow: 0px 0px 18px -7px rgba(0, 0, 0, 1);
+                background-color: #2e2e2e;
+            }
             
            
         }

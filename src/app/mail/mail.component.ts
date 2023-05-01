@@ -2,13 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Renderer2, ResolvedReflectiveFactory } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
-import { Animate } from '../slideup';
+import { Slide } from '../slideup';
 
 @Component({
   selector: 'app-mail',
   templateUrl: './mail.component.html',
   styleUrls: ['./mail.component.scss'],
-  animations: [Animate]
+  animations: [Slide]
 })
 export class MailComponent implements OnInit {
 

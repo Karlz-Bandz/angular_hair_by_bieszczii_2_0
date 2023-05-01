@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Photo } from './photos';
 import { PhotosService } from './photos.service';
-import { Animate } from '../slideup';
+import { Animate } from '../animate';
 
 @Component({
   selector: 'app-photos',

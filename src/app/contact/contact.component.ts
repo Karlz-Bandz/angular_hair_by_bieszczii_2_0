@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Animate } from '../slideup';
+import { Animate } from '../animate';
 
 @Component({
   selector: 'app-contact',
