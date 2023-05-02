@@ -1,10 +1,10 @@
-# AngularHairByBieszczii21
+# AngularHairByBieszczii22
 
 --------------------------------
 
-This is hairbybieszczii.pl front-end application ver. 2.0
+This is hairbybieszczii.pl front-end application ver. 2.2
 
--In ver. 2.0 we've got some new features like
+-In ver. 2.2 we've got some new features like
 possibility to update comments of clients in
 admin panel.
 -Bootstrap has been removed(application is lighter)
