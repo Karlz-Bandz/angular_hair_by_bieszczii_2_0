@@ -2,11 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Renderer2, ResolvedReflectiveFactory } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+import { Slide } from '../slideup';
 
 @Component({
   selector: 'app-mail',
   templateUrl: './mail.component.html',
-  styleUrls: ['./mail.component.scss']
+  styleUrls: ['./mail.component.scss'],
+  animations: [Slide]
 })
 export class MailComponent implements OnInit {
 
@@ -14,12 +16,25 @@ export class MailComponent implements OnInit {
               private rout: Router) { }
 
   private apiServer = environment.apiBaseUrl;
-  
 
-  
+  show = false;
 
+  // toggleShowDiv(divName: string) {
+  //   if (divName === 'divA') {
+  //     console.log(this.animationState);
+  //     this.animationState = this.animationState === 'out' ? 'in' : 'out';
+  //     console.log(this.animationState);
+  //   }
+  // }
+  
   ngOnInit(): void {
-  
+    setTimeout(() => {
+      this.show = true;
+    }, 100);
+  }
+
+  get stateOfImg(){
+    return this.show ? 'show' : 'hide';
   }
 
   public responseBool: boolean = true;

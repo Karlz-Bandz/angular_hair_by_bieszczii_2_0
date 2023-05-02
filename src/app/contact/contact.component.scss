@@ -1,6 +1,6 @@
 
 
- @media only screen and (min-width: 420px){
+ @media only screen and (min-width: 1025px){
 
 .container{
   
@@ -54,9 +54,9 @@
 
 
 
- @media only screen and (max-width: 420px) and (min-width: 281px){
+ @media only screen and (max-width: 1024px) and (min-width: 601px){
 .container{
-  margin-top: 10em;
+  margin-top: 14em;
   
    padding: 0em;
    height: 140px;
@@ -94,9 +94,9 @@
       text-decoration: none;
       color: black;
     }
-    .local:hover{
-      color: #FF9898;
-    }
+    // .local:hover{
+    //   color: #FF9898;
+    // }
   }
 
   padding-bottom: 50px;
@@ -107,6 +107,60 @@
 
 
 }
+@media only screen and (max-width: 600px) and (min-width: 281px){
+  .container{
+    margin-top: 9em;
+    
+     padding: 0em;
+     height: 140px;
+          margin-right: 10%;
+          margin-left: 10%;
+           
+          font-family: 'Montserrat', sans-serif;
+          font-size: large;
+          font-weight: 600;
+  
+          text-align: center;
+        
+   
+  
+  
+    .record{
+      margin: 2em;
+     
+    
+    img{
+      height: 30px;
+      width: auto;
+    }
+   
+  
+    .zero{
+   
+      margin: 0px;
+  
+    }
+    .first{
+    
+      margin: 0px;
+      a{
+        text-decoration: none;
+        color: black;
+      }
+      // .local:hover{
+      //   color: #FF9898;
+      // }
+    }
+  
+    padding-bottom: 50px;
+  
+  }
+  }
+  
+  
+  
+  }
+  
 
 @media only screen and  (max-width: 281px){
 
@@ -149,9 +203,9 @@
         text-decoration: none;
         color: black;
       }
-      .local:hover{
-        color: #FF9898;
-      }
+      // .local:hover{
+      //   color: #FF9898;
+      // }
     }
   
     padding-bottom: 50px;
