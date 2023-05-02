@@ -170,10 +170,16 @@ hr{
             background: white;
             height: 100vh;
             padding: 1em;
+            // font-family: 'Sen', sans-serif;
             .nav_links_mobile{
                 background-color: white;
                 list-style-type: none;
                 margin-top: 10em;
+                a{
+                    font-family: 'Sen', sans-serif;
+                    font-weight: lighter;
+                    font-size: 31px;
+                }
             }
 
            .exit-icon{

@@ -18,15 +18,15 @@
 
 
 
-
-          <div *ngIf="isMenuOpen" class="navbar_mobile">
-            <a (click)="hideMenu()"><img class="exit-icon" alt="exit-img" src="assets\svg\x.svg" ></a>
+          <!-- *ngIf="isMenuOpen" -->
+          <div [@navSlideState]="stateOfNav" class="navbar_mobile">
+            <a (click)="toggleMenu()"><img class="exit-icon" alt="exit-img" src="assets\svg\x.svg" ></a>
              
                    <ul class="nav_links_mobile">
-                         <li><a (click)="hideMenu()" routerLink="/about">O mnie</a></li>
-                         <li><a (click)="hideMenu()" routerLink="/gallery">Galeria</a></li>
-                         <li><a (click)="hideMenu()" routerLink="/pricelist">Cennik</a></li>
-                         <li><a (click)="hideMenu()" routerLink="/contact">Kontakt</a></li>
+                         <li><a (click)="toggleMenu()" routerLink="/about">O mnie</a></li>
+                         <li><a (click)="toggleMenu()" routerLink="/gallery">Galeria</a></li>
+                         <li><a (click)="toggleMenu()" routerLink="/pricelist">Cennik</a></li>
+                         <li><a (click)="toggleMenu()" routerLink="/contact">Kontakt</a></li>
                    </ul>
              
           </div>
