@@ -1,26 +1,27 @@
-@media only screen and (min-width: 420px){
+@media only screen and (min-width: 768px){
 .mycontainer{
 
     font-family: 'Sen', sans-serif;
     text-align: center;
     
-   
-   .small-container{
+.small-container{
 
     padding-top: 200px;
         
-        h2{
-            
+        .main-title{
+            font-size: 22px;
+            font-weight: 100;
             
         }
 
         .group{
            
             height: 50px;
-            width: 490px;
+            width: 470px;
             display: block;
             margin-right: auto;
             margin-left: auto;
+           
            
             .title{
                 text-transform: uppercase;
@@ -31,9 +32,14 @@
    
         width: 400px;
         float: right;
-        margin-top: 14px;
-       
+        margin-top: 4px;
+        height: 33px;
+        cursor: pointer;
+        border: solid 1px rgba(180, 180, 180, 0.973);
+        border-radius: 5px;
+        font-family: 'Sen', sans-serif;
         }
+        
        
      }
      .text-group{
@@ -46,7 +52,11 @@
 
         
             min-height: 200px;
-            min-width: 700px;
+            width: 70%;
+            border-radius: 5px;
+            border: solid 1px rgba(180, 180, 180, 0.973);
+            resize: none;
+            font-family: 'Sen', sans-serif;
         
     }
     }
@@ -57,7 +67,7 @@
             
             margin-left: auto;
             margin-right: auto;
-            width: 398px;
+            width: 410px;
             height: 74px;
             margin-top: 10px;
             margin-bottom: 60px;
@@ -70,14 +80,16 @@
             
             .mybtn{
                 cursor: pointer;
-                width: 90px;
-                height: 75px;
+                width: 80px;
+                height: 45px;
                 float: right;
                 background-color: black;
                 color: white;
                 border: none;
                 font-family: 'Sen', sans-serif;
-                border-radius: 10%
+                border-radius: 10%;
+                margin-top: 16px;
+                // margin-left: 10px;
             }
             .mybtn:hover{
                 -webkit-box-shadow: 0px 0px 18px -7px rgba(0, 0, 0, 1);
@@ -92,102 +104,131 @@
             color: red;
             font-weight: 700;
         }
- }
-}
+    }
+  }
 }
 
-@media only screen and (max-width: 420px){
+@media only screen and (max-width: 767px){
 
 
     .mycontainer{
 
         text-align: center;
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Sen', sans-serif;
         //background-color: white;
      
-        margin-top: 90px;
+        margin-top: 100px;
+        margin-bottom: 110px;
        
        
         .small-container{
-    //border: solid 1px black;
-    position: relative;
-    padding-bottom: 90px;
-    padding-top: 0px;
-    
+         //border: solid 1px black;
+         // position: relative;
+         // padding-bottom: 90px;
+         // padding-top: 0px;
+                .main-title{
 
-  
-            
-                    
-            h2{
-                font-weight: 900;
                 
-            }
-    
-    
-                .form-group{
-                    margin: 20px;
-
-                    
-                label{
-                    font-weight: 600;
                 }
     
-            .form-control{
+    
+                .group{
+                    // margin: 20px;
+
+                    
+                .title{
+                    // font-weight: 600;
+                }
+    
+               .control{
              
-              margin: 5px;
-              text-align: center;
-              margin-left: auto;
-              margin-right: auto;
-              //border: 1px solid black;
+                  //   margin: 5px;
+                  //   text-align: center;
+                  //   margin-left: auto;
+                  //   margin-right: auto;
+                  //border: 1px solid black;
+                  width: 80%;
+                  height: 35px;
+                  border-radius: 5px;
+                    border: solid 1px white;
+                    
+                    font-family: 'Sen', sans-serif;
               
+                }
             }
+
+            .text-group{
+        
+                .text-title{
+                    text-transform: uppercase;
+                    font-size: 15px;
+                }
+                .text-control{
+        
+                
+                    min-height: 200px;
+                    width: 80%;
+                    border-radius: 5px;
+                    border: solid 1px white;
+                    resize: none;
+                    font-family: 'Sen', sans-serif;
+                
+            }
+            }
+            
           
-            textarea{
-                min-height: 200px;
-                min-width: 260px;
-            }
-                    
-                    
-        }
+           
+           
+        
     
             
                
     
             .recap_container{
-                text-align: center;
+               text-align: center;
+            //    display: block;
+//   justify-content: center;
+//   align-items: center;
+//   margin-bottom: 50px;
 
                 .recap{
-                    display: inline-block;
-                    margin-top: 5px;
+                   display: inline-block;
+                    margin-top: 9px;
+                //   margin: 0 auto;
+
+                   
                     
                 }
 
-                .ErrorCaptchaMessage{
-                    color: red;
-                    font-weight: 700;
+                .mybtn{
+                   
+    
+                    margin-top: 9px;
+                    width: 80%;
+                    height: 35px;
+                    font-family: 'Sen', sans-serif;
+                    color: white;
+                    background-color: black;
+                    border: solid 1px black;
+                    border-radius: 5px;
+                    
+                    
+                   
+                    
+                    
                 }
+
+               
                 
                
             }
            
-            .btn-secondary{
-                // display: inline-block;
-                
-                
-                // width: 90px;
-                // height: 25px;
-                // outline: 0;
-                // border: 0.5px solid black;
-    
-                // margin: 2%;
-                // margin-bottom: 80px;
-
-                margin-top: 5px;
-                
-               
-                
-                
+          
+            .ErrorCaptchaMessage{
+                color: red;
+                font-weight: 700;
             }
+        
           
     
             
@@ -195,11 +236,11 @@
     
             
             
-        }
+    }
     
             
                 
         
-    }
+}
 
 }
