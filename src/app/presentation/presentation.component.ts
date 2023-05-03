@@ -1,20 +1,20 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, ElementRef, OnInit,  ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable, shareReplay } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Client } from '../add.description/client';
 import { ClientSelect } from '../add.description/clientSelect';
-import { Description } from '../add.description/description';
 import { GlobService } from '../globalfunctions';
 import { PresentationService } from './presentation.service';
 import { DeleteDescriptionDto } from './DeleteDescriptionDto';
+import { Animate } from '../animate';
 
 
 @Component({
   selector: 'app-presentation',
   templateUrl: './presentation.component.html',
-  styleUrls: ['./presentation.component.scss']
+  styleUrls: ['./presentation.component.scss'],
+  animations: [Animate]
 })
 export class PresentationComponent implements OnInit {
 
@@ -43,7 +43,16 @@ export class PresentationComponent implements OnInit {
   ngOnInit(): void {
     this.getSelectClients();
     this.glob.secureFront();
+    setTimeout(() => {
+      this.show = true;
+    }, 100);
     
+  }
+
+  show = false;
+
+  get stateOfImg(){
+    return this.show ? 'show' : 'hide';
   }
 
   public getSelectClients(): void{

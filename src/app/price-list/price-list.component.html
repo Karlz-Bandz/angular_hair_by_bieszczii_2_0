@@ -1,10 +1,10 @@
-<div class="container">
+<div [@popState]="stateOfImg" class="container">
 
    
     
     <div *ngIf="isValid">
-        <div class="info"><a>*Każda usługa bez strzyżenia -50zł</a></div>
-    <div class="btnContainer"><a>Zobacz też: </a><button class="button" (click)="changeViewOnTreatment()">{{btnName}}</button></div>
+        <!-- <div class="info"><a>*Każda usługa bez strzyżenia -50zł</a></div>
+    <div class="btnContainer"><a>Zobacz też: </a><button class="button" (click)="changeViewOnTreatment()">{{btnName}}</button></div> -->
 
     <div class="small-container">
     <div class="serwis-title">
@@ -14,12 +14,12 @@
         Cena
     </div>
     </div>
-
+<div class="record">
 
     <div class="records" *ngFor="let lists of prices">
         
-     <br>
-    <div class="record">
+     
+    
         
         <div class="serwis">
             {{lists.name}}
@@ -28,22 +28,22 @@
             {{lists.price}}
         </div>
         
-        <br><br>
+        <!-- <br><br> -->
        
        
     </div>
-    <div class="description">
+    <!-- <div class="description">
         {{lists.description}}
         <br><br>
-    </div>
+    </div> -->
         
     </div>
-    <br><br>
-    <div class="btnContainer"><a>Zobacz też: </a><button class="button" (click)="changeViewOnTreatment()">{{btnName}}</button></div>
+    <!-- <br><br>
+    <div class="btnContainer"><a>Zobacz też: </a><button class="button" (click)="changeViewOnTreatment()">{{btnName}}</button></div> -->
 
     </div>
     
-    <div *ngIf="!isValid">
+    <!-- <div *ngIf="!isValid">
         <br>
         <div class="helper"></div>
         <div class="btnContainer"><a>Zobacz też: </a><button class="button" (click)="changeViewOnPriceList()">{{btnName}}</button></div>
@@ -79,6 +79,6 @@
             
         </div>
         <br><br>
-        <div class="btnContainer"><a>Zobacz też: </a><button class="button" (click)="changeViewOnPriceList()">{{btnName}}</button></div>
-        </div>
+        <div class="btnContainer"><a>Zobacz też: </a><button class="button" (click)="changeViewOnPriceList()">{{btnName}}</button></div> -->
+        <!-- </div> -->
 </div>
