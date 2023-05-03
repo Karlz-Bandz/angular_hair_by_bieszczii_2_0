@@ -1,4 +1,4 @@
-<div class="mycontainer">
+<div class="mycontainer"  [@popState]="stateOfImg">
     <form #loginForm="ngForm" (ngSubmit)="goToAdmin(loginForm.value)" ngNativeValidate>
     
         <div class="form-group">

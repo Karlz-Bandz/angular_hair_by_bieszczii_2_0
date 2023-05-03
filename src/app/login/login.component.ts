@@ -5,11 +5,13 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { Login } from './login';
 import { LoginService } from './login.service';
+import { Animate } from '../animate';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  animations: [Animate]
 })
 export class LoginComponent implements OnInit {
 
@@ -18,6 +20,12 @@ export class LoginComponent implements OnInit {
   successMessage: string | undefined;
   invalidLogin: boolean = false;
   loginSuccess: boolean = false;
+
+  show = false;
+
+  get stateOfImg(){
+    return this.show ? 'show' : 'hide';
+  }
 
 
   
@@ -32,6 +40,9 @@ export class LoginComponent implements OnInit {
     private authService: LoginService) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.show = true;
+    }, 100);
   }
 
 
