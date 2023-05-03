@@ -2,11 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Price } from './price';
 import { PriceService } from './price.service';
+import { Animate } from '../animate';
+
 
 @Component({
   selector: 'app-price-list',
   templateUrl: './price-list.component.html',
-  styleUrls: ['./price-list.component.scss']
+  styleUrls: ['./price-list.component.scss'],
+  animations: [Animate]
 })
 export class PriceListComponent implements OnInit {
 
@@ -21,6 +24,15 @@ export class PriceListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPricesLists();
+    setTimeout(() => {
+      this.show = true;
+    }, 100);
+  }
+
+  show = false;
+
+  get stateOfImg(){
+    return this.show ? 'show' : 'hide';
   }
 
   public changeViewOnTreatment(): void{

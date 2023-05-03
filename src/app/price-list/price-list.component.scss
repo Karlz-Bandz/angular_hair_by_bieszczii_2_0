@@ -1,399 +1,299 @@
 
-@media only screen and (min-width: 770px) {
+@media only screen and (min-width: 851px) {
+// .container{
+//     margin-top: 10em;
+//     padding: 2em;
+    
+//     font-family: 'Montserrat', sans-serif;
+//     margin-bottom: 130px;
+
+//     .info{
+//         text-align: center;
+        
+        
+//         a{
+//             margin-bottom:2em; 
+//             font-weight: 600;
+//         }
+//     }
+
+
+// .btnContainer{
+// text-align: center;
+// margin-bottom: 20px;
+
+   
+   
+//    a{
+//     font-weight: 600;
+//     font-size: 20px;
+//    }
+//     .button{
+//     width: 110px;
+//     height: 60px;
+//     border-radius: 90%;
+//     margin: 1em;
+//     filter: brightness(96%);
+//     border: none;
+//     font-weight: 600;
+//     font-size: 20px;
+//     font-family: 'Montserrat', sans-serif;
+//    }
+//    .button:hover{
+//     filter: brightness(100%);
+//    }
+// }
+
+
+
+   
+    
+//     .small-container{
+        
+//         height: 140px;
+//         margin-right: 20%;
+//         margin-left: 20%;
+//         font-size: 25px;
+        
+        
+//         .serwis-title{
+      
+//             display: inline-block;
+//             margin: 0.5em;
+//             font-weight: 900;
+            
+            
+            
+    
+//         }
+//         .price-title{
+            
+//             float: right;
+//             margin: 0.5em;
+//             font-weight: 900;
+            
+            
+    
+//         }
+            
+//     }
+    
+   
+    
+//     .records{
+
+//         border-bottom: 1px dotted;
+//         margin-right: 20%;
+//         margin-left: 20%;
+//     .record{
+      
+      
+//         font-size: 17px;
+//         font-weight: 500;
+
+
+//         .serwis{
+//             display: inline-block;
+//             margin: 1em;
+//             font-weight: 900;
+//             font-size: 20px;
+         
+
+            
+            
+            
+//         }
+//         .price{
+//             float: right;
+//             margin: 1em;
+//             font-weight: 700;
+//            padding: 14px;
+//             border-radius: 99%;
+         
+//             filter: brightness(96%);
+            
+            
+//         }
+//         .description{
+//            font-weight: 500;
+//         }
+
+
+//         margin-bottom: 1.5em;
+//     }
+    
+    
+// }
+// }
 .container{
-    margin-top: 10em;
-    padding: 2em;
-    
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 130px;
+    margin-top: 240px;
+    font-family: 'Sen', sans-serif;
+    margin-bottom: 10%;
 
-    .info{
-        text-align: center;
-        
-        
-        a{
-            margin-bottom:2em; 
-            font-weight: 600;
-        }
-    }
-
-
-.btnContainer{
-text-align: center;
-margin-bottom: 20px;
-
-   
-   
-   a{
-    font-weight: 600;
-    font-size: 20px;
-   }
-    .button{
-    width: 110px;
-    height: 60px;
-    border-radius: 90%;
-    margin: 1em;
-    filter: brightness(96%);
-    border: none;
-    font-weight: 600;
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-   }
-   .button:hover{
-    filter: brightness(100%);
-   }
-}
-
-
-
-   
-    
     .small-container{
-        
-        height: 140px;
-        margin-right: 20%;
-        margin-left: 20%;
-        font-size: 25px;
-        
+        // text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 49%;
+      
+        display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 900;
+  font-size: larger;
+  margin-bottom: 20px;
         
         .serwis-title{
-      
-            display: inline-block;
-            margin: 0.5em;
-            font-weight: 900;
-            
-            
-            
-    
+          order: 0;
         }
         .price-title{
-            
-            float: right;
-            margin: 0.5em;
-            font-weight: 900;
-            
-            
-    
+            order: 1;
         }
-            
     }
-    
-   
-    
+
     .records{
-
-        border-bottom: 1px dotted;
-        margin-right: 20%;
-        margin-left: 20%;
-    .record{
-      
-      
-        font-size: 17px;
-        font-weight: 500;
-
-
-        .serwis{
-            display: inline-block;
-            margin: 1em;
-            font-weight: 900;
-            font-size: 20px;
-         
-
-            
-            
-            
-        }
-        .price{
-            float: right;
-            margin: 1em;
-            font-weight: 700;
-           padding: 14px;
-            border-radius: 99%;
-         
-            filter: brightness(96%);
-            
-            
-        }
-        .description{
-           font-weight: 500;
-        }
-
-
-        margin-bottom: 1.5em;
-    }
-    
-    
-}
-}
-}
-@media only screen and (max-width: 1025px) and (min-width: 420px){
-
-    .container{
-        margin-top: 10em;
-   
-        padding: 2em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 49%;
         
-        font-family: 'Montserrat', sans-serif;
-        margin-bottom: 130px;
-        
-        .info{
-            text-align: center;
-            
-            
-            a{
-                margin-bottom:2em; 
-                font-weight: 600;
-            }
-        }
-
-        .btnContainer{
-            text-align: center;
-            margin-bottom: 20px;
-            
-               
-               
-               a{
-                font-weight: 600;
-                font-size: 20px;
-               }
-                .button{
-                width: 110px;
-                height: 60px;
-                border-radius: 90%;
-                margin: 1em;
-                filter: brightness(96%);
-                border: none;
-                font-weight: 600;
-                font-size: 20px;
-                font-family: 'Montserrat', sans-serif;
-               }
-               .button:hover{
-                filter: brightness(100%);
-               }
-            }
-    
-        
-        .small-container{
-            
-            height: 140px;
-            margin-right: 20%;
-            margin-left: 20%;
-            font-size: 25px;
-            
-            
-            .serwis-title{
-          
-                display: inline-block;
-                margin: 0.5em;
-                font-weight: 900;
-                
-                
-                
-        
-            }
-            .price-title{
-                
-                float: right;
-                margin: 0.5em;
-                font-weight: 900;
-                
-                
-        
-            }
-                
-        }
-        
+        display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: larger;
+  margin-top: 8px;
        
-        
-        .records{
-    
-            border-bottom: 1px solid black;
-            margin-right: 20%;
-            margin-left: 20%;
-        .record{
-          
-            
-            font-size: 15px;
-            font-weight: 500;
-    
-    
             .serwis{
-                display: inline-block;
-                margin: 1em;
-                font-weight: 900;
-                font-size: 18px;
-             
-    
-                
-                
-                
+             order: 0;
+            
             }
             .price{
-                float: right;
-                margin: 1em;
-                font-weight: 700;
-                font-size: 12px;
-               padding: 14px;
-                border-radius: 99%;
+             order: 1;
              
-                filter: brightness(96%);
-                
-                
             }
-            .description{
-               font-weight: 500;
-            }
-    
-    
-            margin-bottom: 1.5em;
-        }
-        
         
     }
-    }
-
-
 }
-@media only screen and (max-width: 420px) and (min-width: 281px){
-    
+}
+@media only screen and (max-width: 850px) and (min-width: 551px){
+
     .container{
-
-
-
-
-        margin-top: 0em;
-       
-        padding: 0em;
-        
-        font-family: 'Montserrat', sans-serif;
-        margin-bottom: 130px;
-
-        .info{
-            text-align: center;
-            margin-top: 90px;
+        margin-top: 300px;
+        font-family: 'Sen', sans-serif;
+        margin-bottom: 10%;
+    
+        .small-container{
+            // text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+          
+            display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 900;
+      font-size: larger;
+      margin-bottom: 20px;
             
-            a{
-                margin-bottom:0em; 
-                font-weight: 600;
+            .serwis-title{
+              order: 0;
+            }
+            .price-title{
+                order: 1;
             }
         }
-        .helper{
-            margin-top: 90px;
-        }
-
-        .btnContainer{
-            text-align: center;
-            margin-bottom: 20px;
-            margin-top: 0px;
+    
+        .records{
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+            
+            display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: larger;
+      margin-top: 8px;
            
+                .serwis{
+                 order: 0;
+                
+                }
+                .price{
+                 order: 1;
+                 
+                }
             
-               
-               
-               a{
-                font-weight: 600;
-                font-size: 20px;
-               }
-                .button{
-                width: 110px;
-                height: 60px;
-                border-radius: 20%;
-                margin: 1em;
-                filter: brightness(96%);
-                border: 1px solid black;
-                font-weight: 600;
-                font-size: 15px;
-                font-family: 'Montserrat', sans-serif;
-               }
-               .button:hover{
-                filter: brightness(100%);
-               }
-            }
+        }
+    }
+}
+@media only screen and (max-width: 550px) and (min-width: 281px){
     
+    .container{
+        margin-top: 68px;
+        font-family: 'Sen', sans-serif;
+        margin-bottom: 100px;
         
+    
         .small-container{
-            display: none;
+            // text-align: center;
+            background-color: #FFF0F5;
+            // background-color: red;
             
-            height: 100px;
-            margin-right: 20%;
-            margin-left: 20%;
-            font-size: 25px;
-            
+            left: 50%;
+    transform: translate(-50%, 0);
+            width:100%;
+            opacity: 0.8;
+            height: 70px;
+          
+            display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 900;
+      font-size: 16px;
+    //   margin-bottom: 200px;
+      position: fixed;
+      
+    
             
             .serwis-title{
-          
-                display: none;
-                margin: 0.5em;
-                font-weight: 900;
-                
-                
-                
-        
+              order: 0;
+              padding-left: 20px;
+              
             }
             .price-title{
-                display: none;
-                float: right;
-                margin: 0.5em;
-                font-weight: 900;
+                order: 1;
+                padding-right: 20px;
                 
-                
-        
             }
-                
         }
-        
-       
-        
-        .records{
-            display: block;
-    
-            border-bottom: 1px dotted;
-            margin-right: 20%;
-            margin-left: 20%;
-        .record{
-          
-          // padding: 5px;
-          // padding-bottom: 25px;
-            
-            font-size: 17px;
-            font-weight: 500;
-    
-    
-            .serwis{
-                display: inline-block;
-                margin: 4px;
-                font-weight: 900;
-                font-size: 16px;
-             
-    
-                
-                
-                
-            }
-            .price{
-                float: right;
-                margin: 1em;
-                font-weight: 700;
-                font-size: 10px;
-               padding: 16px;
-                border-radius: 99%;
-             
-                filter: brightness(96%);
-                
-                
-            }
-            .description{
-               font-weight: 500;
-               margin: 4px;
-            }
-    
-    
-            margin-bottom: 1.5em;
-        }
-        
-        
-    }
-    }
 
+        .record{
+
+            padding-top: 70px;
+    
+        .records{
+            margin-left: auto;
+            margin-right: auto;
+            width: 95%;
+            
+            
+            display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      margin-top: 20px;
+           
+                .serwis{
+                 order: 0;
+                
+                }
+                .price{
+                 order: 1;
+                 
+                }
+            
+        }
+    }
+}
 
 
 
@@ -401,145 +301,71 @@ margin-bottom: 20px;
 
 @media only screen and (max-width:281px) {
     .container{
-
-
-
-
-
-
-        margin-top: 0em;
-       
-        padding: 0em;
+        margin-top: 60px;
+        font-family: 'Sen', sans-serif;
+        margin-bottom: 100px;
         
-        font-family: 'Montserrat', sans-serif;
-        margin-bottom: 130px;
-
-        .info{
-            text-align: center;
-            margin-top: 90px;
-            
-            a{
-                margin-bottom:0em; 
-                font-weight: 600;
-            }
-        }
-        .helper{
-            margin-top: 160px;
-        }
-
-        .btnContainer{
-            text-align: center;
-            margin-bottom: 20px;
-            margin-top: 70px;
-           
-            
-               
-               
-               a{
-                font-weight: 600;
-                font-size: 20px;
-               }
-                .button{
-                width:80px;
-                height: 40px;
-                border-radius: 20%;
-                margin: 0.5em;
-                filter: brightness(96%);
-                border: 1px solid black;
-                font-weight: 600;
-                font-size: 15px;
-                font-family: 'Montserrat', sans-serif;
-               }
-               .button:hover{
-                filter: brightness(100%);
-               }
-            }
     
-        
         .small-container{
+            // text-align: center;
+            background-color: #FFF0F5;
+            // background-color: red;
             
-            height: 140px;
-            margin-right: 20%;
-            margin-left: 20%;
-            font-size: 25px;
-            display: none;
-            
+            left: 50%;
+    transform: translate(-50%, 0);
+            width:100%;
+            opacity: 0.8;
+            height: 70px;
+          
+            display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 900;
+      font-size: 16px;
+    //   margin-bottom: 200px;
+      position: fixed;
+      
+    
             
             .serwis-title{
-          
-                display: none;
-                margin: 0.5em;
-                font-weight: 900;
-                
-                
-                
-        
+              order: 0;
+              padding-left: 20px;
+              
             }
             .price-title{
-                display: none;
-                float: right;
-                margin: 0.5em;
-                font-weight: 900;
+                order: 1;
+                padding-right: 20px;
                 
-                
-        
             }
-                
         }
-        
-       
-        
-        .records{
-            display: inline;
-    
-            border-bottom: 1px dotted;
-            margin-right: 20%;
-            margin-left: 20%;
+
         .record{
-          
-          // padding: 5px;
-          // padding-bottom: 25px;
+
+            padding-top: 70px;
+    
+        .records{
+            margin-left: auto;
+            margin-right: auto;
+            width: 98%;
             
-            font-size: 17px;
-            font-weight: 500;
-    
-    
-            .serwis{
-                display: inline-block;
-                margin: 4px;
-                font-weight: 900;
-                font-size: 16px;
-             
-    
+            
+            display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      margin-top: 20px;
+           
+                .serwis{
+                 order: 0;
                 
-                
-                
-            }
-            .price{
-                float: right;
-                margin: 1em;
-                font-weight: 700;
-                font-size: 10px;
-               padding: 13px;
-                border-radius: 99%;
-             
-                filter: brightness(96%);
-                
-                
-            }
-            .description{
-               font-weight: 500;
-               margin: 4px;
-            }
-    
-    
-            margin-bottom: 1.5em;
+                }
+                .price{
+                 order: 1;
+                 
+                }
+            
         }
-        
-        
     }
-    }
+}
 
-
-    
 }
