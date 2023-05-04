@@ -1,20 +1,17 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { AddDescriptionService } from './add.description.service';
-import { Client } from './client';
-import { Description } from './description';
-import { FormControl, FormGroup } from '@angular/forms';
 import { ClientSelect } from './clientSelect';
 import { Router } from '@angular/router';
 import { GlobService } from '../globalfunctions';
+import { Animate } from '../animate';
 
 @Component({
   selector: 'app-add.description',
   templateUrl: './add.description.component.html',
-  styleUrls: ['./add.description.component.scss']
+  styleUrls: ['./add.description.component.scss'],
+  animations: [Animate]
 })
 export class AddDescriptionComponent implements OnInit {
 
@@ -35,8 +32,17 @@ export class AddDescriptionComponent implements OnInit {
    ngOnInit(): void {
     this.getClients();
     this.glob.secureFront();
+    setTimeout(() => {
+      this.show = true;
+    }, 100);
 
   
+  }
+
+  show = false;
+  
+  get stateOfImg(){
+    return this.show ? 'show' : 'hide';
   }
 
     hello(descriptionForm: {id: number, descrption: string}): void{

@@ -1,7 +1,3 @@
-// @import "bootstrap/scss/bootstrap";
-
-
-
 @media only screen and (min-width: 420px){
 .mycontainer{
      margin-top: 150px;
@@ -212,23 +208,17 @@ padding-bottom: 50px;
      
      width: 100%;
      padding-top: 50px;
-     // margin-left: auto;
-     // margin-right: auto;
-     
      margin-bottom: 150px;
-     // padding-bottom: 50px;
      font-size: small;
      
           .subcontainer{
-               // margin-left: auto;
-               // margin-right: auto;
-               font-family: 'Sen', sans-serif;
-               // font-weight: 800;
-     
                
+               font-family: 'Sen', sans-serif;
+              
+     
      .buttons{
      display: inline-block;
-     // background-color: red;
+   
      height: 50px;
      width: 300px;
      
@@ -265,7 +255,6 @@ padding-bottom: 50px;
                .form-select{
                     
 
-                    // margin: 10px;
                     width: 90%;
                     height: 50px;
                     display: inline;
@@ -336,7 +325,7 @@ padding-bottom: 50px;
                          margin-bottom: 20px;
                          margin-left: auto;
                          margin-right: auto;
-                         // padding-top: 30px;
+                       
                         
      
                          .date{
@@ -347,15 +336,10 @@ padding-bottom: 50px;
                          }
                          .hair-text{
                            background-color: white;
-                         //   padding: 5px;
-                         //   margin-left: 10px;
-                         //   margin-right: 10px;
-                         //   margin-bottom: 10px;
-                         //   margin-top: 30px;
-                         float: left;
+                         
+                        float: left;
                         margin: 10px;
                         height: 200px;
-                        text-align: center;
                         width: 150px;
 
                         font-family: 'Sen', sans-serif;
