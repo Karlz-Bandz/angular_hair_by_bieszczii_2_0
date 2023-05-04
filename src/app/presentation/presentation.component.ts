@@ -82,16 +82,17 @@ export class PresentationComponent implements OnInit {
 
   public getClientDescriptions(presentationForm:{id: number}): void{
     
-    this.flagSort = true;
+    setTimeout(() => {
+      this.flagSort = true;
     this.sortButtonVisible = true;
     this.user_id = presentationForm.id;
     this.presentationService.getClientDescriptions(presentationForm.id).subscribe(
       (response: Client) => this.client = response
     );
+    }, 100);
+
   }
   
-
-
   flagSort: boolean = true;
 
   public sortReverse(): void{

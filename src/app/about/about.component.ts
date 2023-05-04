@@ -33,7 +33,7 @@ export class AboutComponent implements OnInit {
               private rout: Router) { }
 
   imageProfil: Image | undefined; 
-  show = false;
+  
 
   ngOnInit(): void {
     this.getImageProfil();
@@ -41,6 +41,9 @@ export class AboutComponent implements OnInit {
       this.show = true;
     }, 100);
   }
+
+  show = false;
+  
   get stateOfImg(){
     return this.show ? 'show' : 'hide';
   }
