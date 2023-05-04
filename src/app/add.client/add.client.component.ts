@@ -3,11 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { GlobService } from '../globalfunctions';
+import { Animate } from '../animate';
 
 @Component({
   selector: 'app-add.client',
   templateUrl: './add.client.component.html',
-  styleUrls: ['./add.client.component.scss']
+  styleUrls: ['./add.client.component.scss'],
+  animations: [Animate]
 })
 export class AddClientComponent implements OnInit {
 
@@ -20,6 +22,15 @@ export class AddClientComponent implements OnInit {
 
   ngOnInit(): void {
     this.glob.secureFront();
+    setTimeout(() => {
+      this.show = true;
+    }, 100);
+  }
+
+  show = false;
+  
+  get stateOfImg(){
+    return this.show ? 'show' : 'hide';
   }
 
    public addNewClient(clientForm: {clientName: string, clientSurname: string, phoneNumber: string}): void{

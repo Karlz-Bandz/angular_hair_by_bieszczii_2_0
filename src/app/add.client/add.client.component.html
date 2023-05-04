@@ -1,6 +1,6 @@
-<div class="mycontainer">
+<div class="mycontainer" [@popState]="stateOfImg">
     <div *ngIf="response2" class="subcontainer">
-        <h2>Dodaj klienta</h2> 
+        <div class="title">Dodaj klienta</div> 
 
  <form #clientForm="ngForm"  (ngSubmit)="addNewClient(clientForm.value)" ngNativeValidate>
     
