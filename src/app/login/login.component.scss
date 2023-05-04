@@ -76,8 +76,7 @@
         font-family: 'Sen', sans-serif;
         margin-top: 100px;
         text-align: center;
-        width: 70%;
-        //border: solid 1px black;
+        
         margin-left: auto;
         margin-right: auto;
         padding-top: 70px;
@@ -87,7 +86,7 @@
         .form-group{
     
     
-            width: 100%;
+          
             
             font-weight: 800;
     
@@ -97,13 +96,14 @@
                 margin-top: 10px;
                 margin-bottom: 15px;
                 font-weight: 600;
-                width: 270px;
+                width: 240px;
                 height: 30px;
                 border: solid 1px gray;
                 border-radius: 5px;
                 // text-align: center;
                 margin-left: auto;
             margin-right: auto;
+            display: block;
                 
             }
     

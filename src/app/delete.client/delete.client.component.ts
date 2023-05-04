@@ -2,15 +2,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
-import { Client } from '../add.description/client';
 import { ClientSelect } from '../add.description/clientSelect';
 import { GlobService } from '../globalfunctions';
 import { DeleteClientService } from './delete.client.service';
+import { Animate } from '../animate';
 
 @Component({
   selector: 'app-delete.client',
   templateUrl: './delete.client.component.html',
-  styleUrls: ['./delete.client.component.scss']
+  styleUrls: ['./delete.client.component.scss'],
+  animations: [Animate]
 })
 export class DeleteClientComponent implements OnInit {
 
@@ -24,6 +25,15 @@ export class DeleteClientComponent implements OnInit {
   ngOnInit(): void {
     this.getClients();
     this.glob.secureFront();
+    setTimeout(() => {
+      this.show = true;
+    }, 100);
+  }
+
+  show = false;
+  
+  get stateOfImg(){
+    return this.show ? 'show' : 'hide';
   }
 
   private apiUrl = environment.apiBaseUrl;
