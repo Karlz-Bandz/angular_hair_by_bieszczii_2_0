@@ -210,33 +210,47 @@ padding-bottom: 50px;
           margin-top: 50px;
           text-align: center;
      
-     width: 80%;
+     width: 100%;
      padding-top: 50px;
-     margin-left: auto;
-     margin-right: auto;
+     // margin-left: auto;
+     // margin-right: auto;
      
      margin-bottom: 150px;
-     padding-bottom: 50px;
+     // padding-bottom: 50px;
      font-size: small;
      
           .subcontainer{
-               margin-left: auto;
-               margin-right: auto;
-               font-family: 'Montserrat', sans-serif;
-               font-weight: 800;
+               // margin-left: auto;
+               // margin-right: auto;
+               font-family: 'Sen', sans-serif;
+               // font-weight: 800;
      
                
      .buttons{
+     display: inline-block;
+     // background-color: red;
+     height: 50px;
+     width: 300px;
      
           
           
      
      
                .btn-dark{
-                    width: 40%;
-                    height: 70px;
+                    width: 120px;
+                    height: 50px;
                     margin: 10px;
                     margin-bottom: 30px;
+                    
+
+                   
+                   
+                        background-color: black;
+                        color: white;
+                        border: none;
+                        font-family: 'Sen', sans-serif;
+                        border-radius: 5px;
+                        
                    
                }
           }
@@ -246,22 +260,38 @@ padding-bottom: 50px;
                }
      
                .form-group{
+                    margin-top: 60px;
      
                .form-select{
                     
 
-                    margin: 10px;
+                    // margin: 10px;
                     width: 90%;
                     height: 50px;
                     display: inline;
+
+                     font-family: 'Sen', sans-serif;
+               
+               border: solid 1px gray;
+               border-radius: 5px;
                     
                   
                }
+
+              
      
                .btn-dark{
                  
                     margin-top: 18px;
-                    width: 45%;
+                    width: 180px;
+                    height: 50px;
+
+                    background-color: black;
+                        color: white;
+                        border: none;
+                        font-family: 'Sen', sans-serif;
+                        border-radius: 5px;
+                       
                }
           }
      
@@ -276,7 +306,7 @@ padding-bottom: 50px;
                     
      
                     .number{
-                         width: 45%;
+                         width: 190px;
                          height: 60px;
                          padding: 10px;
                          text-align: center;
@@ -290,6 +320,7 @@ padding-bottom: 50px;
                          .subnumber{
                               margin-top: 6px;
                               background-color: white;
+                              font-size: 18px;
                          }
                         
                          
@@ -299,11 +330,11 @@ padding-bottom: 50px;
                          height: auto;
                          background-color: white;
                          border-radius: 6px;
-                         margin-top: 20px;
+                         margin-top: 30px;
                          margin-bottom: 20px;
                          margin-left: auto;
                          margin-right: auto;
-                         padding-top: 10px;
+                         // padding-top: 30px;
                         
      
                          .date{
@@ -314,17 +345,48 @@ padding-bottom: 50px;
                          }
                          .hair-text{
                            background-color: white;
-                           padding: 5px;
-                           margin-left: 10px;
-                           margin-right: 10px;
-                           margin-bottom: 10px;
-                           margin-top: 30px;
+                         //   padding: 5px;
+                         //   margin-left: 10px;
+                         //   margin-right: 10px;
+                         //   margin-bottom: 10px;
+                         //   margin-top: 30px;
+                         float: left;
+                        margin: 10px;
+                        height: 200px;
+                        text-align: center;
+                        width: 180px;
+
+                        font-family: 'Sen', sans-serif;
+                        border: solid 1px white;
+                        border-radius: 5px;
+                        resize: none;
                            
                          }
+                         .mybtn{
+                              margin-top: 0px;
+                              width: 55px;
+                              margin-right: 2px;
+                              height: 230px;
+                              margin-bottom: 10px;
+                              float: right;
+                              background-color: black;
+                                  color: white;
+                                  border: none;
+                                  font-family: 'Sen', sans-serif;
+                                  border-radius: 5px;
+                                  
+          
+                         }
                          .btn-dark{
-                              height: 100%;
+                              height: 35px;
                               width: 100%;
                               bottom: auto;
+
+                              background-color: black;
+                                  color: white;
+                                  border: none;
+                                  font-family: 'Sen', sans-serif;
+                                  border-radius: 5px;
                          }
                     }
      

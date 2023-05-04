@@ -3,8 +3,8 @@
 
 <div class="buttons">
       <button class="btn btn-dark" (click)="comeBack()">Powrót</button>
-      <button class="btn btn-dark" *ngIf="sortButtonVisible" (click)="sortReverse()">Sortuj od najstarszej</button>
-      <button class="btn btn-dark" *ngIf="!sortButtonVisible" (click)="sortNormal()">Sortuj od najnowszej</button>
+      <button class="btn btn-dark" *ngIf="sortButtonVisible" (click)="sortReverse()">Sortuj  \</button>
+      <button class="btn btn-dark" *ngIf="!sortButtonVisible" (click)="sortNormal()">Sortuj  /</button>
 
 </div>
       
@@ -25,7 +25,7 @@
     <div class="presentation">
   
       <div class="number">
-       Numer telefonu:<br>
+       Numer telefonu:<br><br>
        <!-- <a href="tel: +48-'+c'"> TODO--><div class="subnumber">{{client?.phoneNumber}}</div>
       </div>
       <div class="description"   *ngFor="let description of client?.descriptions" >
