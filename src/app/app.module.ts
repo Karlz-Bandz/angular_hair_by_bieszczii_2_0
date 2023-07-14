@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 
 
@@ -82,6 +83,7 @@ const routes: Routes = [{path: '', component: MainComponent},
     ReactiveFormsModule,
     RecaptchaModule,
     RecaptchaFormsModule,
+    CarouselModule.forRoot(),
     RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })
     
   ],

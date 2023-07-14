@@ -32,14 +32,25 @@ export class AboutComponent implements OnInit {
    constructor(private imageService: ImageService,
               private rout: Router) { }
 
-  imageProfil: Image | undefined; 
+  imageProfil: Image[] = []; 
+
+  imageOneProfil : Image | undefined;
   
 
   ngOnInit(): void {
+    
     this.getImageProfil();
     setTimeout(() => {
       this.show = true;
     }, 100);
+
+  
+      this.setProfile(0);
+      
+      setTimeout(() => {
+        this.setterTest();
+      }, 1000)
+    
   }
 
   show = false;
@@ -48,12 +59,49 @@ export class AboutComponent implements OnInit {
     return this.show ? 'show' : 'hide';
   }
 
+  public doSetTimeout(i: number): void{
+    setTimeout(() => {
+      this.imageOneProfil = this.imageProfil[i];
+      
+    }, i * 5000);
+  }
+
+  public setterTest(): void{
+    
+    for(let i = 1; i < this.imageProfil.length; i++){
+       this.doSetTimeout(i);
+    }
+
+  }
+
+  public setProfile(index: number): void{
+    setTimeout(() => {
+      this.imageOneProfil = this.imageProfil[index];
+      console.log(index);
+    }, 1000);
+  }
+
   public getImageProfil(): void{
        this.imageService.getImageUrl().subscribe(
-        (response) => this.imageProfil = response,
+        (response) => {
+          this.imageProfil = response;
+        },
         (error: any) => {console.log(error);
                          this.rout.navigate(['/error/main']) },
         () => console.log("Done!")
        );
   }
+
+  public shuffleImages(): void{
+
+  }
+
+//   public getOneImageProfil(): void{
+//     this.imageService.getOneImageUrl().subscribe(
+//      (response) => this.imageOneProfil = response,
+//      (error: any) => {console.log(error);
+//                       this.rout.navigate(['/error/main']) },
+//      () => console.log("Done!")
+//     );
+// }
 }
