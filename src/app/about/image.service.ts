@@ -15,7 +15,13 @@ export class ImageService {
 
   constructor(private http: HttpClient) {}
 
-  public getImageUrl(): Observable<Image>{
+  public getImageUrl(): Observable<Image[]>{
+
+    return this.http.get<Image[]>(`${this.apiServerUrl}/image/profile`);
+
+  }
+
+  public getOneImageUrl(): Observable<Image>{
 
     return this.http.get<Image>(`${this.apiServerUrl}/image/0`);
 
