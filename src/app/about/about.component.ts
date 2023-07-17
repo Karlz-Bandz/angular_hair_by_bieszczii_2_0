@@ -42,15 +42,10 @@ export class AboutComponent implements OnInit {
     this.getImageProfil();
     setTimeout(() => {
       this.show = true;
+      this.setterTest();
     }, 100);
 
-  
-      this.setProfile(0);
-      
-      setTimeout(() => {
-        this.setterTest();
-      }, 1000)
-    
+    this.setProfile(0);
   }
 
   show = false;
@@ -61,24 +56,20 @@ export class AboutComponent implements OnInit {
 
   public doSetTimeout(i: number): void{
     setTimeout(() => {
-      this.imageOneProfil = this.imageProfil[i];
-      
-    }, i * 5000);
+      this.setProfile(i);
+    }, i * 4000);
   }
 
   public setterTest(): void{
-    
     for(let i = 1; i < this.imageProfil.length; i++){
        this.doSetTimeout(i);
     }
-
   }
 
   public setProfile(index: number): void{
     setTimeout(() => {
       this.imageOneProfil = this.imageProfil[index];
-      console.log(index);
-    }, 1000);
+     }, 1000);
   }
 
   public getImageProfil(): void{
@@ -95,13 +86,4 @@ export class AboutComponent implements OnInit {
   public shuffleImages(): void{
 
   }
-
-//   public getOneImageProfil(): void{
-//     this.imageService.getOneImageUrl().subscribe(
-//      (response) => this.imageOneProfil = response,
-//      (error: any) => {console.log(error);
-//                       this.rout.navigate(['/error/main']) },
-//      () => console.log("Done!")
-//     );
-// }
 }
